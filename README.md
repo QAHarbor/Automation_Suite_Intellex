@@ -20,6 +20,7 @@ Clone the project and install the required dependencies:
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 npm install
+npm playwright install
 ```
 
 ### 3. Install Allure Commandline (Optional)
