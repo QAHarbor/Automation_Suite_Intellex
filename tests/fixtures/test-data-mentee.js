@@ -12,6 +12,13 @@ module.exports = {
             password: process.env.INVALID_PASSWORD,
         },
     },
+//For Valid Mentee SignUp
+    ValidMentee_SignUp:{
+        firstName: 'John',
+        lastName: 'Doe',
+        email:'jon@yopmail.com', 
+        password:'Test@12345678', 
+    },
 
     // URLs Section: for base URLs and portal URLs
     urls: {
@@ -19,7 +26,6 @@ module.exports = {
         portalUrl: process.env.PORTAL_URL,
     },
 
-    // Personal Details Section: for updating personal details like first name, last name, etc.
     personalDetails: {
         valid: {
             firstName: 'Tasniva',
@@ -43,7 +49,6 @@ module.exports = {
         },
     },
 
-    // Interests Section: for updating interests/preferences
     interests: {
         valid: 'Coding, Reading, Music',
         invalid: 'A'.repeat(500),  // Invalid long interests

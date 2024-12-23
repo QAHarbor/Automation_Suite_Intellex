@@ -1,0 +1,1 @@
+Assertion Passed: The "Showing 0 results." message is displayed.

@@ -10,6 +10,19 @@ module.exports = {
         company: 'QA Techno',
         linkedIn: 'https://www.linkedin.com/in/mentor',
     },
+    
+    validMentorLogin: {
+        email:'tony@yopmail.com',
+        password:'Testdata@123'
+        
+    },
+
+    validVolunteer: {
+        email:'aaa@yopmail.com',
+        password:'Testdata@123'
+        
+    },
+   
     invalidMentorDetails: {
         firstName: '',
         lastName: '',
@@ -19,6 +32,7 @@ module.exports = {
         company: '',
         linkedIn: 'invalid-linkedin-url'
     },
+
     urls: {
         baseUrl: process.env.BASE_URL,
     }

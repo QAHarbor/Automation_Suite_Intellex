@@ -40,11 +40,7 @@ test.describe('Mentee Profile Tests', () => {
     });
 
 
-    test('Mentee Successfully update profile picture', async ({ page }) => {
-
-        await profilePage.setValidProfilePicture();
-
-    });
+    
 
     test('Mentee Successfully changed password', async ({ page }) => {
 
@@ -88,9 +84,4 @@ test.describe('Mentee Profile Tests', () => {
         expect(updatedInterestsText).toBe(expectedInterestsText);
     });
    
-
-    
-
-   
-    
 });

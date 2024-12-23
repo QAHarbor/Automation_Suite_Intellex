@@ -1,0 +1,1 @@
+Successfully validated mentee can see all events according to schedule.

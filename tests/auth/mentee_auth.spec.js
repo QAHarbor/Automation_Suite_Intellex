@@ -15,12 +15,7 @@ test.describe('Mentee Login Tests', () => {
         // Perform login with valid credentials
         await authPage.login(validCredentials.email, validCredentials.password);
 
-        await page.waitForTimeout(5000)
-
-        // Verify successful login
-      //  const isSuccessful = await authPage.isLoginSuccessful(urls.portalUrl);
-      //  console.log(urls.portalUrl)
-       // expect(isSuccessful).toBeTruthy();
+        await page.waitForTimeout(5000);
     });
 
    
