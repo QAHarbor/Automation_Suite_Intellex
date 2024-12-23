@@ -26,6 +26,7 @@ npm install
 To generate Allure reports, install the Allure command line:
 ```bash
 npm install -g allure-commandline --save-dev
+npm install allure-playwright --save-dev
 ```
 
 ---
