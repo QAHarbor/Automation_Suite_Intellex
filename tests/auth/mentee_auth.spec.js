@@ -15,7 +15,12 @@ test.describe('Mentee Login Tests', () => {
         // Perform login with valid credentials
         await authPage.login(validCredentials.email, validCredentials.password);
 
-        await page.waitForTimeout(5000);
+        // Wait for success message
+        const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
+        await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
+
+        // Wait for navigation to portal
+        await page.waitForURL(`${process.env.PORTAL_URL}`);
     });
 
    
@@ -28,10 +33,10 @@ test.describe('Mentee Login Tests', () => {
         // Perform login with invalid credentials
         await authPage.login(invalidCredentials.email, invalidCredentials.password);
 
-    // Assert that the error message "Incorrect email or password" is visible on the page
-  const errorMessage = await page.locator('text=Incorrect email or password');
-  await expect(errorMessage).toBeVisible();
-
+        // Assert that the error message "Incorrect email or password" is visible on the page
+        const errorMessage = await page.locator('.error');
+        // await expect(errorMessage).toBeVisible();
+        await expect(errorMessage).toHaveText('Incorrect email or password', { timeout: parseInt(process.env.TIMEOUT) });
     
     });
 });

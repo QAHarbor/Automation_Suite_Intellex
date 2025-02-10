@@ -57,164 +57,10 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.49.1",
-    "workers": 2,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
-    {
-      "title": "auth\\mentee_auth.spec.js",
-      "file": "auth/mentee_auth.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentee Login Tests",
-          "file": "auth/mentee_auth.spec.js",
-          "line": 8,
-          "column": 6,
-          "specs": [
-            {
-              "title": "should log in successfully with valid credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 39060,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T03:22:53.869Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "ea8bd4394f3d5fcfe118-d05abe25ba568e7fa807",
-              "file": "auth/mentee_auth.spec.js",
-              "line": 9,
-              "column": 9
-            },
-            {
-              "title": "should fail to log in with invalid credentials",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "failed",
-                      "duration": 6163,
-                      "error": {
-                        "message": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n",
-                        "stack": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n\n    at AuthPage.login (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js:16:31)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\auth\\mentee_auth.spec.js:29:24",
-                        "location": {
-                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js",
-                          "column": 31,
-                          "line": 16
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\AuthPage.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m login(email\u001b[33m,\u001b[39m password) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpasswordInput\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mloginButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m     }\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js",
-                            "column": 31,
-                            "line": 16
-                          },
-                          "message": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\AuthPage.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m login(email\u001b[33m,\u001b[39m password) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpasswordInput\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mloginButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m     }\u001b[0m\n\u001b[2m    at AuthPage.login (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js:16:31)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\auth\\mentee_auth.spec.js:29:24\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T03:23:33.216Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js",
-                        "column": 31,
-                        "line": 16
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "ea8bd4394f3d5fcfe118-5b1b7217886cf0e88913",
-              "file": "auth/mentee_auth.spec.js",
-              "line": 22,
-              "column": 9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "auth\\mentor_auth.spec.js",
-      "file": "auth/mentor_auth.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentor Login Tests",
-          "file": "auth/mentor_auth.spec.js",
-          "line": 8,
-          "column": 6,
-          "specs": [
-            {
-              "title": "should login mentor successfully with valid credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 41253,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T03:22:53.869Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "61e955e431be7c8c864d-c4464461c76456b4d46a",
-              "file": "auth/mentor_auth.spec.js",
-              "line": 11,
-              "column": 5
-            }
-          ]
-        }
-      ]
-    },
     {
       "title": "home\\FooterTests.spec.js",
       "file": "home/FooterTests.spec.js",
@@ -239,13 +85,29 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 24178,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Assertion Passed: Header text matches \"Terms & Conditions\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:45:40.887Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "fad340b25582eacfb966-42bc4e9de3392eb21421",
               "file": "home/FooterTests.spec.js",
-              "line": 6,
+              "line": 5,
               "column": 7
             },
             {
@@ -259,13 +121,29 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 24222,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Assertion Passed: Header text is correct\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:46:05.508Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "fad340b25582eacfb966-2282f9fffeae32d884c3",
               "file": "home/FooterTests.spec.js",
-              "line": 21,
+              "line": 16,
               "column": 7
             },
             {
@@ -279,17 +157,33 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 2183,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Assertion Passed: Mentee Sign Up page displayed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:46:29.740Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "fad340b25582eacfb966-bb81ef972e084391e3e4",
               "file": "home/FooterTests.spec.js",
-              "line": 36,
+              "line": 27,
               "column": 7
             },
             {
-              "title": "Sucessful Navigation Become Mentor Page",
+              "title": "Successful Navigation Become Mentor Page",
               "ok": true,
               "tags": [],
               "tests": [
@@ -299,17 +193,33 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 3468,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Successfully navigated to Become Mentor Page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:46:31.935Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "id": "fad340b25582eacfb966-7a7bc540abce93300deb",
+              "id": "fad340b25582eacfb966-f8b80752bb2e414c099c",
               "file": "home/FooterTests.spec.js",
-              "line": 46,
-              "column": 9
+              "line": 35,
+              "column": 7
             },
             {
-              "title": "Sucessful Navigation to Find Mentor",
+              "title": "Successful Navigation to Find Mentor",
               "ok": true,
               "tags": [],
               "tests": [
@@ -319,17 +229,33 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 3006,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Successfully navigated to Find Mentor Page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:46:35.413Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "id": "fad340b25582eacfb966-3f2a1f4accac0854a8b3",
+              "id": "fad340b25582eacfb966-6a32d4624360761af2e6",
               "file": "home/FooterTests.spec.js",
-              "line": 60,
-              "column": 9
+              "line": 43,
+              "column": 7
             },
             {
-              "title": "Sucessful Navigation to Privacy page",
+              "title": "Successful Navigation to Privacy page",
               "ok": true,
               "tags": [],
               "tests": [
@@ -339,14 +265,30 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 23261,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Assertion Passed: Header text matches \"Privacy Policy\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:46:38.428Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "id": "fad340b25582eacfb966-df24eb72e1a178a3b87f",
+              "id": "fad340b25582eacfb966-319c45a009c7b8d8bc4a",
               "file": "home/FooterTests.spec.js",
-              "line": 76,
-              "column": 9
+              "line": 51,
+              "column": 7
             }
           ]
         }
@@ -376,14 +318,30 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 31241,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Successfully navigated to Join as Mentor.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:45:40.919Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "a02391dad5b2ae76e406-06ddb713a65e3ebe0584",
               "file": "home/HomePage.spec.js",
-              "line": 7,
-              "column": 7
+              "line": 6,
+              "column": 9
             },
             {
               "title": "Successful Navigation to Find Mentor Page",
@@ -396,13 +354,29 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 48388,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Heading Text: Mentors\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:46:12.620Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "a02391dad5b2ae76e406-66601a13622fbea83718",
               "file": "home/HomePage.spec.js",
-              "line": 26,
+              "line": 20,
               "column": 9
             },
             {
@@ -416,13 +390,29 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 2411,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Successfully navigated to Home page.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:47:01.018Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "a02391dad5b2ae76e406-1a1bf411fcf65c34c3f1",
               "file": "home/HomePage.spec.js",
-              "line": 42,
+              "line": 33,
               "column": 9
             },
             {
@@ -436,13 +426,29 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 22298,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Successfully navigated to Mentee Create Account page.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:47:03.452Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "a02391dad5b2ae76e406-95c1bef67634889cd6f0",
               "file": "home/HomePage.spec.js",
-              "line": 52,
+              "line": 41,
               "column": 9
             },
             {
@@ -456,917 +462,30 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 27950,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Successfully navigated to Mentor Filter page.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-10T06:47:25.758Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "a02391dad5b2ae76e406-1fae7193976772f15668",
               "file": "home/HomePage.spec.js",
-              "line": 68,
+              "line": 53,
               "column": 9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "mentee\\MenteeActionTests.spec.js",
-      "file": "mentee/MenteeActionTests.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentee Action TestCases",
-          "file": "mentee/MenteeActionTests.spec.js",
-          "line": 9,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Navigate to Browse Mentor page successfully",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6b904c9af08bed45e5b9-850ed41aa985ec60916c",
-              "file": "mentee/MenteeActionTests.spec.js",
-              "line": 25,
-              "column": 7
-            },
-            {
-              "title": "Search with no results displays the correct message",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6b904c9af08bed45e5b9-37700f4329f593294c8f",
-              "file": "mentee/MenteeActionTests.spec.js",
-              "line": 41,
-              "column": 7
-            },
-            {
-              "title": "Add mentor to favorite list",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6b904c9af08bed45e5b9-d0abaa4434c06d49d3fa",
-              "file": "mentee/MenteeActionTests.spec.js",
-              "line": 57,
-              "column": 7
-            },
-            {
-              "title": "Remove mentor from favorite list",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6b904c9af08bed45e5b9-ed95795ccca0e39a150c",
-              "file": "mentee/MenteeActionTests.spec.js",
-              "line": 73,
-              "column": 7
-            },
-            {
-              "title": "Mentee can see all events",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "6b904c9af08bed45e5b9-2ba7e70342b5cdfbd423",
-              "file": "mentee/MenteeActionTests.spec.js",
-              "line": 89,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "mentee\\menteeSignUp.spec.js",
-      "file": "mentee/menteeSignUp.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentee SignUp Tests",
-          "file": "mentee/menteeSignUp.spec.js",
-          "line": 7,
-          "column": 6,
-          "specs": [
-            {
-              "title": "should sign up successfully with valid credentials",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "status": "failed",
-                      "duration": 1818,
-                      "error": {
-                        "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n",
-                        "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n\n    at SignUp_Mentee.navigateToSignUpMentee (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js:23:25)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:10:22",
-                        "location": {
-                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
-                          "column": 25,
-                          "line": 23
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MenteeSignUpPage.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36masync\u001b[39m navigateToSignUpMentee() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1200\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m800\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinUs\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinAsMentee\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
-                            "column": 25,
-                            "line": 23
-                          },
-                          "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MenteeSignUpPage.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36masync\u001b[39m navigateToSignUpMentee() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1200\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m800\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinUs\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinAsMentee\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at SignUp_Mentee.navigateToSignUpMentee (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js:23:25)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:10:22\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T03:23:35.523Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
-                        "column": 25,
-                        "line": 23
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "6bcb8247865cb5651b25-9128582624ca7ebde644",
-              "file": "mentee/menteeSignUp.spec.js",
-              "line": 8,
-              "column": 7
-            },
-            {
-              "title": "Navigate to SignUp page and then Privacy Policy Page",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "failed",
-                      "duration": 2136,
-                      "error": {
-                        "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n",
-                        "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n\n    at SignUp_Mentee.navigateToPrivacyPage (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js:77:25)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:28:18",
-                        "location": {
-                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
-                          "column": 25,
-                          "line": 77
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MenteeSignUpPage.js:77\n\n\u001b[0m \u001b[90m 75 |\u001b[39m\n \u001b[90m 76 |\u001b[39m     \u001b[36masync\u001b[39m navigateToPrivacyPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1200\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m800\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinUs\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 80 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinAsMentee\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
-                            "column": 25,
-                            "line": 77
-                          },
-                          "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MenteeSignUpPage.js:77\n\n\u001b[0m \u001b[90m 75 |\u001b[39m\n \u001b[90m 76 |\u001b[39m     \u001b[36masync\u001b[39m navigateToPrivacyPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1200\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m800\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinUs\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 80 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinAsMentee\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at SignUp_Mentee.navigateToPrivacyPage (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js:77:25)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:28:18\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T03:23:38.598Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
-                        "column": 25,
-                        "line": 77
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "6bcb8247865cb5651b25-ff63d89c4d462b69453b",
-              "file": "mentee/menteeSignUp.spec.js",
-              "line": 24,
-              "column": 7
-            }
-          ],
-          "suites": [
-            {
-              "title": "Mentee SignUpPage Tests",
-              "file": "mentee/menteeSignUp.spec.js",
-              "line": 40,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "Navigate to SignUp page and then Terms and Condition Page",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 2000000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "",
-                      "projectName": "",
-                      "results": [
-                        {
-                          "workerIndex": 4,
-                          "status": "failed",
-                          "duration": 36693,
-                          "error": {
-                            "message": "Error: page.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('p.MuiTypography-root.header-text')\u001b[22m\n",
-                            "stack": "Error: page.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('p.MuiTypography-root.header-text')\u001b[22m\n\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:47:37",
-                            "location": {
-                              "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js",
-                              "column": 37,
-                              "line": 47
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 45 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[33mSignUp\u001b[39m\u001b[33m.\u001b[39mnavigateToTermPage()\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m       \u001b[36mconst\u001b[39m headerText \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtextContent(\u001b[32m'p.MuiTypography-root.header-text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m       \u001b[90m// Assert that the header text matches the expected value\u001b[39m\n \u001b[90m 50 |\u001b[39m       \u001b[36mif\u001b[39m (headerText\u001b[33m.\u001b[39mtrim() \u001b[33m===\u001b[39m \u001b[32m'Terms & Conditions'\u001b[39m) {\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js",
-                                "column": 37,
-                                "line": 47
-                              },
-                              "message": "Error: page.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('p.MuiTypography-root.header-text')\u001b[22m\n\n\n\u001b[0m \u001b[90m 45 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[33mSignUp\u001b[39m\u001b[33m.\u001b[39mnavigateToTermPage()\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m       \u001b[36mconst\u001b[39m headerText \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtextContent(\u001b[32m'p.MuiTypography-root.header-text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m       \u001b[90m// Assert that the header text matches the expected value\u001b[39m\n \u001b[90m 50 |\u001b[39m       \u001b[36mif\u001b[39m (headerText\u001b[33m.\u001b[39mtrim() \u001b[33m===\u001b[39m \u001b[32m'Terms & Conditions'\u001b[39m) {\u001b[0m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:47:37\u001b[22m"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-02-10T03:23:43.232Z",
-                          "attachments": [],
-                          "errorLocation": {
-                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js",
-                            "column": 37,
-                            "line": 47
-                          }
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "id": "6bcb8247865cb5651b25-d8be65adb7a15d4620e1",
-                  "file": "mentee/menteeSignUp.spec.js",
-                  "line": 41,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "mentee\\MentorBooking.spec.js",
-      "file": "mentee/MentorBooking.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentee Login Tests",
-          "file": "mentee/MentorBooking.spec.js",
-          "line": 10,
-          "column": 6,
-          "specs": [
-            {
-              "title": "should log in successfully with valid credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "interrupted",
-                      "duration": 95476,
-                      "error": {
-                        "message": "Error: locator.waitFor: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('a.MuiButton-containedPrimary') to be visible\u001b[22m\n",
-                        "stack": "Error: locator.waitFor: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('a.MuiButton-containedPrimary') to be visible\u001b[22m\n\n    at MenteeAction.navigateToBrowsePage (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js:29:30)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\MentorBooking.spec.js:23:9",
-                        "location": {
-                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js",
-                          "column": 30,
-                          "line": 29
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MenteeAction.js:29\n\n\u001b[0m \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for the Browse button to be visible and click it\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBrowseBtn\u001b[39m\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBrowseBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js",
-                            "column": 30,
-                            "line": 29
-                          },
-                          "message": "Error: locator.waitFor: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('a.MuiButton-containedPrimary') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MenteeAction.js:29\n\n\u001b[0m \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for the Browse button to be visible and click it\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBrowseBtn\u001b[39m\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBrowseBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\u001b[0m\n\u001b[2m    at MenteeAction.navigateToBrowsePage (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js:29:30)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\MentorBooking.spec.js:23:9\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T03:23:40.655Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js",
-                        "column": 30,
-                        "line": 29
-                      }
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "2e75e56f8d83745ed48b-d733c94e05a758f8ecba",
-              "file": "mentee/MentorBooking.spec.js",
-              "line": 11,
-              "column": 9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "mentee\\mentorFilters.spec.js",
-      "file": "mentee/mentorFilters.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentor Filters and Tab Navigation Tests",
-          "file": "mentee/mentorFilters.spec.js",
-          "line": 9,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Successfully applies checkbox filters and verifies selection",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "cbd4a3fe8fae798f021e-fcf14629e274e6f9944d",
-              "file": "mentee/mentorFilters.spec.js",
-              "line": 35,
-              "column": 7
-            },
-            {
-              "title": "Switches tabs and verifies the active tab",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "cbd4a3fe8fae798f021e-84f5cefd176967f672c3",
-              "file": "mentee/mentorFilters.spec.js",
-              "line": 58,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "mentee\\profile.spec.js",
-      "file": "mentee/profile.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentee Profile Tests",
-          "file": "mentee/profile.spec.js",
-          "line": 9,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Mentee Successfully Updates Personal Details",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "ff9a3809ac12c2beb3eb-66333e06c7a7f76e650a",
-              "file": "mentee/profile.spec.js",
-              "line": 30,
-              "column": 9
-            },
-            {
-              "title": "Mentee Successfully changed password",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "ff9a3809ac12c2beb3eb-90fe225edae72b977206",
-              "file": "mentee/profile.spec.js",
-              "line": 45,
-              "column": 9
-            },
-            {
-              "title": "Mentee Successfully Updates Their Bio",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "ff9a3809ac12c2beb3eb-a1bb389be41316822bbc",
-              "file": "mentee/profile.spec.js",
-              "line": 54,
-              "column": 9
-            },
-            {
-              "title": "Mentee Successfully Views Their Bio",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "ff9a3809ac12c2beb3eb-89633ce356f41acd9508",
-              "file": "mentee/profile.spec.js",
-              "line": 67,
-              "column": 9
-            },
-            {
-              "title": "Mentee Successfully Update Preferences",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "ff9a3809ac12c2beb3eb-7927b62420f54cab1569",
-              "file": "mentee/profile.spec.js",
-              "line": 75,
-              "column": 9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "mentor\\Availability.spec.js",
-      "file": "mentor/Availability.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentor Availability Tests",
-          "file": "mentor/Availability.spec.js",
-          "line": 9,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Should pick extra date and override",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "interrupted",
-                      "duration": 53888,
-                      "error": {
-                        "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//p[normalize-space()=\\'Availability\\'])[1]')\u001b[22m\n",
-                        "stack": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//p[normalize-space()=\\'Availability\\'])[1]')\u001b[22m\n\n    at Availability.NavigatetoAvailability (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js:16:36)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentor\\Availability.spec.js:19:25",
-                        "location": {
-                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js",
-                          "column": 36,
-                          "line": 16
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MentorAvailability.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[90m// Navigate to Availability section\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mNavigatetoAvailability\u001b[39m() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAvailabilityBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \n \u001b[90m 18 |\u001b[39m         \u001b[90m// Scroll down the page to make sure content is loaded\u001b[39m\n \u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js",
-                            "column": 36,
-                            "line": 16
-                          },
-                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//p[normalize-space()=\\'Availability\\'])[1]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MentorAvailability.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[90m// Navigate to Availability section\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mNavigatetoAvailability\u001b[39m() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAvailabilityBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \n \u001b[90m 18 |\u001b[39m         \u001b[90m// Scroll down the page to make sure content is loaded\u001b[39m\n \u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at Availability.NavigatetoAvailability (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js:16:36)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentor\\Availability.spec.js:19:25\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T03:24:21.530Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js",
-                        "column": 36,
-                        "line": 16
-                      }
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "d3dd3d76527f1a60e959-355e6f692dab82f7dcce",
-              "file": "mentor/Availability.spec.js",
-              "line": 11,
-              "column": 7
-            },
-            {
-              "title": "Able to see availability",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "d3dd3d76527f1a60e959-4c3ffd5d172061383acd",
-              "file": "mentor/Availability.spec.js",
-              "line": 27,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "mentor\\Bookings.spec.js",
-      "file": "mentor/Bookings.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Check Bookings Tests",
-          "file": "mentor/Bookings.spec.js",
-          "line": 10,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Sucessfully see cancelled bookings",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "27cfbe80da1e99601698-ab6dfa3459d000d41497",
-              "file": "mentor/Bookings.spec.js",
-              "line": 13,
-              "column": 5
-            },
-            {
-              "title": "Sucessfully see pending bookings",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "27cfbe80da1e99601698-d85511d70c2fe88bf993",
-              "file": "mentor/Bookings.spec.js",
-              "line": 28,
-              "column": 5
-            },
-            {
-              "title": "Sucessfully see upcoming bookings",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "27cfbe80da1e99601698-5b832ab660432cd54ff8",
-              "file": "mentor/Bookings.spec.js",
-              "line": 43,
-              "column": 5
-            },
-            {
-              "title": "Sucessfully see History bookings",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "27cfbe80da1e99601698-a99b7febf865cfd39873",
-              "file": "mentor/Bookings.spec.js",
-              "line": 58,
-              "column": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "mentor\\mentorProfile.spec.js",
-      "file": "mentor/mentorProfile.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentor Profile Test Cases",
-          "file": "mentor/mentorProfile.spec.js",
-          "line": 9,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Successfully Make mentor volunteer",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "e0c445a0333c85d7c684-f5a27fbf4cbaab28e29b",
-              "file": "mentor/mentorProfile.spec.js",
-              "line": 10,
-              "column": 7
-            },
-            {
-              "title": "Login successfully with valid credentials and change password",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "e0c445a0333c85d7c684-e57587b8181644ac71b9",
-              "file": "mentor/mentorProfile.spec.js",
-              "line": 22,
-              "column": 7
-            },
-            {
-              "title": "Login successfully with valid credentials and see notifcations",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "e0c445a0333c85d7c684-b0297bd043d910996660",
-              "file": "mentor/mentorProfile.spec.js",
-              "line": 37,
-              "column": 7
-            },
-            {
-              "title": "Login successfully and see own profile",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "e0c445a0333c85d7c684-e0c82e59adc837e98406",
-              "file": "mentor/mentorProfile.spec.js",
-              "line": 52,
-              "column": 5
-            },
-            {
-              "title": "Mentor can update bio",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "e0c445a0333c85d7c684-1da73d7880d192e3223e",
-              "file": "mentor/mentorProfile.spec.js",
-              "line": 68,
-              "column": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "mentor\\SignUp.spec.js",
-      "file": "mentor/SignUp.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Mentor SignUp Tests",
-          "file": "mentor/SignUp.spec.js",
-          "line": 8,
-          "column": 6,
-          "specs": [
-            {
-              "title": "should sign up mentor successfully with valid credentials and handle duplicate email",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "17d3bc7fc7ace7b1184e-889470bf08b83d3f22d5",
-              "file": "mentor/SignUp.spec.js",
-              "line": 11,
-              "column": 5
             }
           ]
         }
@@ -1375,11 +494,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-10T03:22:52.944Z",
-    "duration": 143956.628,
-    "expected": 2,
-    "skipped": 36,
-    "unexpected": 4,
+    "startTime": "2025-02-10T06:45:39.008Z",
+    "duration": 135244.79200000002,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
     "flaky": 0
   }
 }

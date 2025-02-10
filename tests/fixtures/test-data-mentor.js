@@ -12,15 +12,13 @@ module.exports = {
     },
     
     validMentorLogin: {
-        email:'tony@yopmail.com',
-        password:'Testdata@123'
-        
+        email:process.env.VALID_MENTOR_EMAIL,
+        password:process.env.VALID_MENTOR_PASSWORD,
     },
 
     validVolunteer: {
         email:'aaa@yopmail.com',
-        password:'Testdata@123'
-        
+        password:'Testdata@123' 
     },
    
     invalidMentorDetails: {

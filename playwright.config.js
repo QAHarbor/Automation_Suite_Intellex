@@ -14,6 +14,7 @@ module.exports = {
     headless: true,                // Set to false to see the browser
     viewport: { width: 1280, height: 720 },  // Browser viewport size
   },
+  workers: 4,
   testMatch: [
     '**/*.spec.js',    // Match test files ending with .spec.js
     '**/*.test.js',    // Match test files ending with .test.js
