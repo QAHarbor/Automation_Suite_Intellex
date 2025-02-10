@@ -3,7 +3,7 @@ class HomePage {
         this.page = page;
 
         // URLs
-        this.baseUrl = process.env.BASE_URL || 'https://intellex-academic-core.vercel.app';
+        this.baseUrl = process.env.BASE_URL || 'https://intellex-stagging.vercel.app';
         this.profileUrl = process.env.PROFILE_URL || `${this.baseUrl}/portal/profile`;
         this.homeUrl = process.env.HOME_URL || `${this.baseUrl}/login`;
         

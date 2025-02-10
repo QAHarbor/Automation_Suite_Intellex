@@ -15,10 +15,10 @@ test.describe('Home Page Navigation Tests', () => {
     await homePage.clickJoinAsMentor();
 
     // Wait for the URL to change to the expected one
-    await page.waitForURL('https://intellex-academic-core.vercel.app/register/?type=mentor', { timeout: 50000 });
+    await page.waitForURL('https://intellex-stagging.vercel.app/register/?type=mentor', { timeout: 50000 });
 
     // Assert that the URL is correct after navigation
-    await expect(page).toHaveURL('https://intellex-academic-core.vercel.app/register/?type=mentor');
+    await expect(page).toHaveURL('https://intellex-stagging.vercel.app/register/?type=mentor');
     
     console.log('Successfully navigated to Join as Mentor.');
 });
@@ -44,7 +44,7 @@ test.describe('Home Page Navigation Tests', () => {
 
         // Navigate to the home page
         await homePage.navigateToHome();
-        await expect(page).toHaveURL('https://intellex-academic-core.vercel.app/');
+        await expect(page).toHaveURL('https://intellex-stagging.vercel.app/');
 
         console.log('Successfully navigated to Home page.');
     });
@@ -57,10 +57,10 @@ test.describe('Home Page Navigation Tests', () => {
         await homePage.createNewAcc();
     
         // Wait for the URL to change to the Mentee Create Account page
-        await page.waitForURL('https://intellex-academic-core.vercel.app/register/?type=mentee', { timeout: 20000 });
+        await page.waitForURL('https://intellex-stagging.vercel.app/register/?type=mentee', { timeout: 20000 });
     
         // Optionally, assert the URL if needed
-        await expect(page).toHaveURL('https://intellex-academic-core.vercel.app/register/?type=mentee');
+        await expect(page).toHaveURL('https://intellex-stagging.vercel.app/register/?type=mentee');
         
         console.log('Successfully navigated to Mentee Create Account page.');
     });
@@ -73,10 +73,10 @@ test.describe('Home Page Navigation Tests', () => {
         await homePage.discoverMentor();
     
         // Wait for the URL to change to the Mentor Filter page
-        await page.waitForURL('https://intellex-academic-core.vercel.app/mentors/?minPrice=0&maxPrice=1000', { timeout: 50000 });
+        await page.waitForURL('https://intellex-stagging.vercel.app/mentors/?minPrice=0&maxPrice=1000', { timeout: 50000 });
     
         // Optionally, assert the URL if needed
-        await expect(page).toHaveURL('https://intellex-academic-core.vercel.app/mentors/?minPrice=0&maxPrice=1000');
+        await expect(page).toHaveURL('https://intellex-stagging.vercel.app/mentors/?minPrice=0&maxPrice=1000');
         
         console.log('Successfully navigated to Mentor Filter page.');
     });

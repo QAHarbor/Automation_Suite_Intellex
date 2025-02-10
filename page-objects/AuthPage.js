@@ -8,7 +8,7 @@ class AuthPage {
     }
 
     async navigateToLogin() {
-        await this.page.goto('https://intellex-academic-core.vercel.app/');
+        await this.page.goto('https://intellex-stagging.vercel.app/');
         await this.loginLink.click();
     }
 
@@ -19,7 +19,7 @@ class AuthPage {
     }
 
     async isLoginSuccessful() {
-        return this.page.url() === 'https://intellex-academic-core.vercel.app/portal/';
+        return this.page.url() === 'https://intellex-stagging.vercel.app/portal/';
     }
 }
 

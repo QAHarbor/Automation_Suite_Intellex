@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\playwright.config.js",
-    "rootDir": "C:/Users/Dell/Desktop/Intellex-Automation-Project_playwright/tests",
+    "configFile": "C:\\laragon\\www\\Automation_Suite_Intellex\\playwright.config.js",
+    "rootDir": "C:/laragon/www/Automation_Suite_Intellex/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 4
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -28,7 +28,7 @@
         }
       ],
       [
-        "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        "C:\\laragon\\www\\Automation_Suite_Intellex\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
         null
       ]
     ],
@@ -39,13 +39,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/Dell/Desktop/Intellex-Automation-Project_playwright/test-results",
+        "outputDir": "C:/laragon/www/Automation_Suite_Intellex/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "",
         "name": "",
-        "testDir": "C:/Users/Dell/Desktop/Intellex-Automation-Project_playwright/tests",
+        "testDir": "C:/laragon/www/Automation_Suite_Intellex/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.spec.js",
@@ -57,7 +57,7 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.49.1",
-    "workers": 4,
+    "workers": 2,
     "webServer": null
   },
   "suites": [
@@ -89,12 +89,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 32332,
+                      "duration": 39060,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-23T07:31:37.789Z",
+                      "startTime": "2025-02-10T03:22:53.869Z",
                       "attachments": []
                     }
                   ],
@@ -121,48 +121,36 @@
                     {
                       "workerIndex": 0,
                       "status": "failed",
-                      "duration": 21194,
+                      "duration": 6163,
                       "error": {
-                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Incorrect email or password')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Incorrect email or password')\u001b[22m\n",
-                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Incorrect email or password')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Incorrect email or password')\u001b[22m\n\n    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\auth\\mentee_auth.spec.js:33:30",
-                        "matcherResult": {
-                          "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Incorrect email or password')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Incorrect email or password')\u001b[22m\n",
-                          "pass": false,
-                          "actual": "hidden",
-                          "name": "toBeVisible",
-                          "expected": "visible",
-                          "log": [
-                            "  - expect.toBeVisible with timeout 5000ms",
-                            "  - waiting for locator('text=Incorrect email or password')"
-                          ],
-                          "timeout": 5000
-                        },
+                        "message": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n",
+                        "stack": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n\n    at AuthPage.login (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js:16:31)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\auth\\mentee_auth.spec.js:29:24",
                         "location": {
-                          "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\auth\\mentee_auth.spec.js",
-                          "column": 30,
-                          "line": 33
+                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js",
+                          "column": 31,
+                          "line": 16
                         },
-                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m     \u001b[90m// Assert that the error message \"Incorrect email or password\" is visible on the page\u001b[39m\n \u001b[90m 32 |\u001b[39m   \u001b[36mconst\u001b[39m errorMessage \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=Incorrect email or password'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   \u001b[36mawait\u001b[39m expect(errorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\AuthPage.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m login(email\u001b[33m,\u001b[39m password) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpasswordInput\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mloginButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m     }\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\auth\\mentee_auth.spec.js",
-                            "column": 30,
-                            "line": 33
+                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js",
+                            "column": 31,
+                            "line": 16
                           },
-                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Incorrect email or password')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Incorrect email or password')\u001b[22m\n\n\n\u001b[0m \u001b[90m 31 |\u001b[39m     \u001b[90m// Assert that the error message \"Incorrect email or password\" is visible on the page\u001b[39m\n \u001b[90m 32 |\u001b[39m   \u001b[36mconst\u001b[39m errorMessage \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=Incorrect email or password'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   \u001b[36mawait\u001b[39m expect(errorMessage)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\auth\\mentee_auth.spec.js:33:30\u001b[22m"
+                          "message": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByPlaceholder('Enter your email')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\AuthPage.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m login(email\u001b[33m,\u001b[39m password) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpasswordInput\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mloginButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m     }\u001b[0m\n\u001b[2m    at AuthPage.login (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js:16:31)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\auth\\mentee_auth.spec.js:29:24\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-23T07:32:10.570Z",
+                      "startTime": "2025-02-10T03:23:33.216Z",
                       "attachments": [],
                       "errorLocation": {
-                        "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\auth\\mentee_auth.spec.js",
-                        "column": 30,
-                        "line": 33
+                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\AuthPage.js",
+                        "column": 31,
+                        "line": 16
                       }
                     }
                   ],
@@ -206,12 +194,12 @@
                     {
                       "workerIndex": 1,
                       "status": "passed",
-                      "duration": 39913,
+                      "duration": 41253,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-23T07:31:37.750Z",
+                      "startTime": "2025-02-10T03:22:53.869Z",
                       "attachments": []
                     }
                   ],
@@ -251,24 +239,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 12472,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Assertion Passed: Header text matches \"Terms & Conditions\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:26.967Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "fad340b25582eacfb966-42bc4e9de3392eb21421",
@@ -287,24 +259,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 13948,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Assertion Passed: Header text is correct\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:39.553Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "fad340b25582eacfb966-2282f9fffeae32d884c3",
@@ -323,24 +279,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 2034,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Assertion Passed: Mentee Sign Up page displayed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:53.509Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "fad340b25582eacfb966-bb81ef972e084391e3e4",
@@ -359,24 +299,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 1807,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Become Mentor Page\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:55.552Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "fad340b25582eacfb966-7a7bc540abce93300deb",
@@ -395,24 +319,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 18008,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Find Mentor Page\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:57.366Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "fad340b25582eacfb966-3f2a1f4accac0854a8b3",
@@ -431,24 +339,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 7046,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Assertion Passed: Header text matches \"Privacy Policy\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:34:15.381Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "fad340b25582eacfb966-df24eb72e1a178a3b87f",
@@ -484,24 +376,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 12865,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Join as Mentor.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:34:22.456Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "a02391dad5b2ae76e406-06ddb713a65e3ebe0584",
@@ -520,24 +396,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 17691,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Heading Text: Mentors\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:34:35.329Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "a02391dad5b2ae76e406-66601a13622fbea83718",
@@ -556,24 +416,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 1333,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Home page.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:34:53.031Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "a02391dad5b2ae76e406-1a1bf411fcf65c34c3f1",
@@ -592,24 +436,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 11108,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Mentee Create Account page.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:34:54.370Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "a02391dad5b2ae76e406-95c1bef67634889cd6f0",
@@ -628,24 +456,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 11168,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Mentor Filter page.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:35:05.484Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "a02391dad5b2ae76e406-1fae7193976772f15668",
@@ -681,24 +493,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "status": "passed",
-                      "duration": 37401,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully found Tony\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:35:16.590Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "6b904c9af08bed45e5b9-850ed41aa985ec60916c",
@@ -717,24 +513,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "status": "passed",
-                      "duration": 25818,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Assertion Passed: The \"Showing 0 results.\" message is displayed.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:35:54.137Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "6b904c9af08bed45e5b9-37700f4329f593294c8f",
@@ -753,24 +533,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "status": "passed",
-                      "duration": 58482,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully added mentor to the favorite list.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:36:19.966Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "6b904c9af08bed45e5b9-d0abaa4434c06d49d3fa",
@@ -789,24 +553,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "status": "passed",
-                      "duration": 37148,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully removed mentor from the favorite list.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:37:18.461Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "6b904c9af08bed45e5b9-ed95795ccca0e39a150c",
@@ -825,24 +573,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "status": "passed",
-                      "duration": 47348,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully validated mentee can see all events according to schedule.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:37:55.649Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "6b904c9af08bed45e5b9-2ba7e70342b5cdfbd423",
@@ -869,7 +601,7 @@
           "specs": [
             {
               "title": "should sign up successfully with valid credentials",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -880,22 +612,42 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 42420,
-                      "errors": [],
-                      "stdout": [
+                      "workerIndex": 1,
+                      "status": "failed",
+                      "duration": 1818,
+                      "error": {
+                        "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n\n    at SignUp_Mentee.navigateToSignUpMentee (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js:23:25)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:10:22",
+                        "location": {
+                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
+                          "column": 25,
+                          "line": 23
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MenteeSignUpPage.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36masync\u001b[39m navigateToSignUpMentee() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1200\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m800\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinUs\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinAsMentee\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
                         {
-                          "text": "Email is already registered.\n"
+                          "location": {
+                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
+                            "column": 25,
+                            "line": 23
+                          },
+                          "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MenteeSignUpPage.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36masync\u001b[39m navigateToSignUpMentee() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1200\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m800\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinUs\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinAsMentee\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at SignUp_Mentee.navigateToSignUpMentee (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js:23:25)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:10:22\u001b[22m"
                         }
                       ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-23T07:31:37.736Z",
-                      "attachments": []
+                      "startTime": "2025-02-10T03:23:35.523Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
+                        "column": 25,
+                        "line": 23
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "6bcb8247865cb5651b25-9128582624ca7ebde644",
@@ -905,7 +657,7 @@
             },
             {
               "title": "Navigate to SignUp page and then Privacy Policy Page",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -917,21 +669,41 @@
                   "results": [
                     {
                       "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 25503,
-                      "errors": [],
-                      "stdout": [
+                      "status": "failed",
+                      "duration": 2136,
+                      "error": {
+                        "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n\n    at SignUp_Mentee.navigateToPrivacyPage (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js:77:25)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:28:18",
+                        "location": {
+                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
+                          "column": 25,
+                          "line": 77
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MenteeSignUpPage.js:77\n\n\u001b[0m \u001b[90m 75 |\u001b[39m\n \u001b[90m 76 |\u001b[39m     \u001b[36masync\u001b[39m navigateToPrivacyPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1200\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m800\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinUs\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 80 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinAsMentee\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
                         {
-                          "text": "Assertion Passed: Header text matches \"Privacy Policy\"\n"
+                          "location": {
+                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
+                            "column": 25,
+                            "line": 77
+                          },
+                          "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://intellex-stagging.vercel.app/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MenteeSignUpPage.js:77\n\n\u001b[0m \u001b[90m 75 |\u001b[39m\n \u001b[90m 76 |\u001b[39m     \u001b[36masync\u001b[39m navigateToPrivacyPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mBASE_URL\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1200\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m800\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinUs\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 80 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mJoinAsMentee\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at SignUp_Mentee.navigateToPrivacyPage (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js:77:25)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:28:18\u001b[22m"
                         }
                       ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-23T07:32:20.715Z",
-                      "attachments": []
+                      "startTime": "2025-02-10T03:23:38.598Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeSignUpPage.js",
+                        "column": 25,
+                        "line": 77
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "6bcb8247865cb5651b25-ff63d89c4d462b69453b",
@@ -949,7 +721,7 @@
               "specs": [
                 {
                   "title": "Navigate to SignUp page and then Terms and Condition Page",
-                  "ok": true,
+                  "ok": false,
                   "tags": [],
                   "tests": [
                     {
@@ -960,22 +732,42 @@
                       "projectName": "",
                       "results": [
                         {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 18579,
-                          "errors": [],
-                          "stdout": [
+                          "workerIndex": 4,
+                          "status": "failed",
+                          "duration": 36693,
+                          "error": {
+                            "message": "Error: page.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('p.MuiTypography-root.header-text')\u001b[22m\n",
+                            "stack": "Error: page.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('p.MuiTypography-root.header-text')\u001b[22m\n\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:47:37",
+                            "location": {
+                              "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js",
+                              "column": 37,
+                              "line": 47
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 45 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[33mSignUp\u001b[39m\u001b[33m.\u001b[39mnavigateToTermPage()\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m       \u001b[36mconst\u001b[39m headerText \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtextContent(\u001b[32m'p.MuiTypography-root.header-text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m       \u001b[90m// Assert that the header text matches the expected value\u001b[39m\n \u001b[90m 50 |\u001b[39m       \u001b[36mif\u001b[39m (headerText\u001b[33m.\u001b[39mtrim() \u001b[33m===\u001b[39m \u001b[32m'Terms & Conditions'\u001b[39m) {\u001b[0m"
+                          },
+                          "errors": [
                             {
-                              "text": "Assertion Passed: Header text matches \"Terms & Conditions\"\n"
+                              "location": {
+                                "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js",
+                                "column": 37,
+                                "line": 47
+                              },
+                              "message": "Error: page.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('p.MuiTypography-root.header-text')\u001b[22m\n\n\n\u001b[0m \u001b[90m 45 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[33mSignUp\u001b[39m\u001b[33m.\u001b[39mnavigateToTermPage()\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m       \u001b[36mconst\u001b[39m headerText \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtextContent(\u001b[32m'p.MuiTypography-root.header-text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m       \u001b[90m// Assert that the header text matches the expected value\u001b[39m\n \u001b[90m 50 |\u001b[39m       \u001b[36mif\u001b[39m (headerText\u001b[33m.\u001b[39mtrim() \u001b[33m===\u001b[39m \u001b[32m'Terms & Conditions'\u001b[39m) {\u001b[0m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js:47:37\u001b[22m"
                             }
                           ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2024-12-23T07:32:46.228Z",
-                          "attachments": []
+                          "startTime": "2025-02-10T03:23:43.232Z",
+                          "attachments": [],
+                          "errorLocation": {
+                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\menteeSignUp.spec.js",
+                            "column": 37,
+                            "line": 47
+                          }
                         }
                       ],
-                      "status": "expected"
+                      "status": "unexpected"
                     }
                   ],
                   "id": "6bcb8247865cb5651b25-d8be65adb7a15d4620e1",
@@ -1016,21 +808,41 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 88792,
-                      "errors": [],
-                      "stdout": [
+                      "status": "interrupted",
+                      "duration": 95476,
+                      "error": {
+                        "message": "Error: locator.waitFor: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('a.MuiButton-containedPrimary') to be visible\u001b[22m\n",
+                        "stack": "Error: locator.waitFor: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('a.MuiButton-containedPrimary') to be visible\u001b[22m\n\n    at MenteeAction.navigateToBrowsePage (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js:29:30)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\MentorBooking.spec.js:23:9",
+                        "location": {
+                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js",
+                          "column": 30,
+                          "line": 29
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MenteeAction.js:29\n\n\u001b[0m \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for the Browse button to be visible and click it\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBrowseBtn\u001b[39m\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBrowseBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
                         {
-                          "text": "Booking confirmed and returned to the home page.\n"
+                          "location": {
+                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js",
+                            "column": 30,
+                            "line": 29
+                          },
+                          "message": "Error: locator.waitFor: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('a.MuiButton-containedPrimary') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MenteeAction.js:29\n\n\u001b[0m \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for the Browse button to be visible and click it\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBrowseBtn\u001b[39m\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mBrowseBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\u001b[0m\n\u001b[2m    at MenteeAction.navigateToBrowsePage (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js:29:30)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentee\\MentorBooking.spec.js:23:9\u001b[22m"
                         }
                       ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-23T07:31:37.727Z",
-                      "attachments": []
+                      "startTime": "2025-02-10T03:23:40.655Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MenteeAction.js",
+                        "column": 30,
+                        "line": 29
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "2e75e56f8d83745ed48b-d733c94e05a758f8ecba",
@@ -1066,53 +878,7 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "interrupted",
-                      "duration": 564254,
-                      "error": {
-                        "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Browse Mentor' })\u001b[22m\n",
-                        "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Browse Mentor' })\u001b[22m\n\n    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\mentorFilters.spec.js:41:62",
-                        "location": {
-                          "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\mentorFilters.spec.js",
-                          "column": 62,
-                          "line": 41
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 39 |\u001b[39m\n \u001b[90m 40 |\u001b[39m      \u001b[90m// Navigate to Browse Mentors page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m      \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Browse Mentor'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[90m// Select 'Interview Preparation' filter\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m mentorFiltersPage\u001b[33m.\u001b[39mcheckInterviewPreparation()\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\mentorFilters.spec.js",
-                            "column": 62,
-                            "line": 41
-                          },
-                          "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Browse Mentor' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 39 |\u001b[39m\n \u001b[90m 40 |\u001b[39m      \u001b[90m// Navigate to Browse Mentors page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m      \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Browse Mentor'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[90m// Select 'Interview Preparation' filter\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m mentorFiltersPage\u001b[33m.\u001b[39mcheckInterviewPreparation()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\mentorFilters.spec.js:41:62\u001b[22m"
-                        },
-                        {
-                          "message": "Error: Target page, context or browser has been closed"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "tasnivasumibd@gmail.com\n"
-                        },
-                        {
-                          "text": "Testdata@123\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:35:16.673Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\mentorFilters.spec.js",
-                        "column": 62,
-                        "line": 41
-                      }
-                    }
-                  ],
+                  "results": [],
                   "status": "skipped"
                 }
               ],
@@ -1169,89 +935,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "status": "passed",
-                      "duration": 38879,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "https://intellex-academic-core.vercel.app/portal/profile/\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:38:43.019Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "ff9a3809ac12c2beb3eb-66333e06c7a7f76e650a",
               "file": "mentee/profile.spec.js",
               "line": 30,
-              "column": 9
-            },
-            {
-              "title": "Mentee Successfully update profile picture",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "status": "failed",
-                      "duration": 20333,
-                      "error": {
-                        "message": "TypeError: profilePage.setValidProfilePicture is not a function",
-                        "stack": "TypeError: profilePage.setValidProfilePicture is not a function\n    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\profile.spec.js:45:27",
-                        "location": {
-                          "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\profile.spec.js",
-                          "column": 27,
-                          "line": 45
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 43 |\u001b[39m     test(\u001b[32m'Mentee Successfully update profile picture'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 44 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m         \u001b[36mawait\u001b[39m profilePage\u001b[33m.\u001b[39msetValidProfilePicture()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m\n \u001b[90m 47 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\profile.spec.js",
-                            "column": 27,
-                            "line": 45
-                          },
-                          "message": "TypeError: profilePage.setValidProfilePicture is not a function\n\n\u001b[0m \u001b[90m 43 |\u001b[39m     test(\u001b[32m'Mentee Successfully update profile picture'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 44 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m         \u001b[36mawait\u001b[39m profilePage\u001b[33m.\u001b[39msetValidProfilePicture()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m\n \u001b[90m 47 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\profile.spec.js:45:27\u001b[22m"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "https://intellex-academic-core.vercel.app/portal/profile/\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:39:21.906Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\profile.spec.js",
-                        "column": 27,
-                        "line": 45
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "ff9a3809ac12c2beb3eb-604e50ed4136fd9cbfee",
-              "file": "mentee/profile.spec.js",
-              "line": 43,
               "column": 9
             },
             {
@@ -1265,32 +955,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 9,
-                      "status": "passed",
-                      "duration": 23147,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "https://intellex-academic-core.vercel.app/portal/profile/\n"
-                        },
-                        {
-                          "text": "Changed password sucessfully\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:39:43.219Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "ff9a3809ac12c2beb3eb-90fe225edae72b977206",
               "file": "mentee/profile.spec.js",
-              "line": 49,
+              "line": 45,
               "column": 9
             },
             {
@@ -1304,32 +975,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 9,
-                      "status": "passed",
-                      "duration": 21710,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "https://intellex-academic-core.vercel.app/portal/profile/\n"
-                        },
-                        {
-                          "text": "I love Bangladesh and learning new technologies.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:40:06.478Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "ff9a3809ac12c2beb3eb-a1bb389be41316822bbc",
               "file": "mentee/profile.spec.js",
-              "line": 58,
+              "line": 54,
               "column": 9
             },
             {
@@ -1343,32 +995,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 9,
-                      "status": "passed",
-                      "duration": 22377,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "https://intellex-academic-core.vercel.app/portal/profile/\n"
-                        },
-                        {
-                          "text": "I love Bangladesh and learning new technologies.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:40:28.195Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "ff9a3809ac12c2beb3eb-89633ce356f41acd9508",
               "file": "mentee/profile.spec.js",
-              "line": 71,
+              "line": 67,
               "column": 9
             },
             {
@@ -1382,56 +1015,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 9,
-                      "status": "interrupted",
-                      "duration": 230519,
-                      "error": {
-                        "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Save' })\u001b[22m\n\u001b[2m    - locator resolved to <button id=\":r9:\" tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary mui-1h2urr7\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <h6 class=\"MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap mui-657g2l\">Engineering</h6> from <div width=\"470px\" role=\"tooltip\" data-popper-placement=\"bottom\" class=\"MuiPopper-root mui-toqsd5\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    393 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m        - element is visible, enabled and stable\u001b[22m\n\u001b[2m        - scrolling into view if needed\u001b[22m\n\u001b[2m        - done scrolling\u001b[22m\n\u001b[2m        - <h6 class=\"MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap mui-657g2l\">Engineering</h6> from <div width=\"470px\" role=\"tooltip\" data-popper-placement=\"bottom\" class=\"MuiPopper-root mui-toqsd5\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m      - retrying click action\u001b[22m\n\u001b[2m        - waiting 500ms\u001b[22m\n",
-                        "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Save' })\u001b[22m\n\u001b[2m    - locator resolved to <button id=\":r9:\" tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary mui-1h2urr7\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <h6 class=\"MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap mui-657g2l\">Engineering</h6> from <div width=\"470px\" role=\"tooltip\" data-popper-placement=\"bottom\" class=\"MuiPopper-root mui-toqsd5\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    393 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m        - element is visible, enabled and stable\u001b[22m\n\u001b[2m        - scrolling into view if needed\u001b[22m\n\u001b[2m        - done scrolling\u001b[22m\n\u001b[2m        - <h6 class=\"MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap mui-657g2l\">Engineering</h6> from <div width=\"470px\" role=\"tooltip\" data-popper-placement=\"bottom\" class=\"MuiPopper-root mui-toqsd5\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m      - retrying click action\u001b[22m\n\u001b[2m        - waiting 500ms\u001b[22m\n\n    at MenteeProfilePage.updateInterests (C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MenteeProfilePage.js:66:63)\n    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\profile.spec.js:81:9",
-                        "location": {
-                          "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MenteeProfilePage.js",
-                          "column": 63,
-                          "line": 66
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MenteeProfilePage.js:66\n\n\u001b[0m \u001b[90m 64 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Accounting'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'controlled'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 66 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Save'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 67 |\u001b[39m     }\n \u001b[90m 68 |\u001b[39m\n \u001b[90m 69 |\u001b[39m     \u001b[90m// async setValidProfilePicture() {\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MenteeProfilePage.js",
-                            "column": 63,
-                            "line": 66
-                          },
-                          "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Save' })\u001b[22m\n\u001b[2m    - locator resolved to <button id=\":r9:\" tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary mui-1h2urr7\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <h6 class=\"MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap mui-657g2l\">Engineering</h6> from <div width=\"470px\" role=\"tooltip\" data-popper-placement=\"bottom\" class=\"MuiPopper-root mui-toqsd5\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    393 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m        - element is visible, enabled and stable\u001b[22m\n\u001b[2m        - scrolling into view if needed\u001b[22m\n\u001b[2m        - done scrolling\u001b[22m\n\u001b[2m        - <h6 class=\"MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap mui-657g2l\">Engineering</h6> from <div width=\"470px\" role=\"tooltip\" data-popper-placement=\"bottom\" class=\"MuiPopper-root mui-toqsd5\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m      - retrying click action\u001b[22m\n\u001b[2m        - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MenteeProfilePage.js:66\n\n\u001b[0m \u001b[90m 64 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Accounting'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'controlled'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 66 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Save'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 67 |\u001b[39m     }\n \u001b[90m 68 |\u001b[39m\n \u001b[90m 69 |\u001b[39m     \u001b[90m// async setValidProfilePicture() {\u001b[39m\u001b[0m\n\u001b[2m    at MenteeProfilePage.updateInterests (C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MenteeProfilePage.js:66:63)\u001b[22m\n\u001b[2m    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentee\\profile.spec.js:81:9\u001b[22m"
-                        },
-                        {
-                          "message": "Error: Target page, context or browser has been closed"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "https://intellex-academic-core.vercel.app/portal/profile/\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:40:50.580Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MenteeProfilePage.js",
-                        "column": 63,
-                        "line": 66
-                      }
-                    }
-                  ],
+                  "results": [],
                   "status": "skipped"
                 }
               ],
               "id": "ff9a3809ac12c2beb3eb-7927b62420f54cab1569",
               "file": "mentee/profile.spec.js",
-              "line": 79,
+              "line": 75,
               "column": 9
             }
           ]
@@ -1453,7 +1043,7 @@
           "specs": [
             {
               "title": "Should pick extra date and override",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1464,42 +1054,42 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "status": "failed",
-                      "duration": 386974,
+                      "workerIndex": 5,
+                      "status": "interrupted",
+                      "duration": 53888,
                       "error": {
-                        "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//button[normalize-space()=\\'Add an override\\'])[1]')\u001b[22m\n",
-                        "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//button[normalize-space()=\\'Add an override\\'])[1]')\u001b[22m\n\n    at Availability.AddAvailableDate (C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorAvailability.js:26:35)\n    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentor\\Availability.spec.js:20:25",
+                        "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//p[normalize-space()=\\'Availability\\'])[1]')\u001b[22m\n",
+                        "stack": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//p[normalize-space()=\\'Availability\\'])[1]')\u001b[22m\n\n    at Availability.NavigatetoAvailability (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js:16:36)\n    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentor\\Availability.spec.js:19:25",
                         "location": {
-                          "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorAvailability.js",
-                          "column": 35,
-                          "line": 26
+                          "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js",
+                          "column": 36,
+                          "line": 16
                         },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MentorAvailability.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[90m// Add available date\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mAddAvailableDate\u001b[39m() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAddOverrideBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Wait for 5 seconds for the overlay to load\u001b[39m\n \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[90m// Ensure NextMonthBtn is clickable and then click it\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MentorAvailability.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[90m// Navigate to Availability section\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mNavigatetoAvailability\u001b[39m() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAvailabilityBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \n \u001b[90m 18 |\u001b[39m         \u001b[90m// Scroll down the page to make sure content is loaded\u001b[39m\n \u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorAvailability.js",
-                            "column": 35,
-                            "line": 26
+                            "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js",
+                            "column": 36,
+                            "line": 16
                           },
-                          "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//button[normalize-space()=\\'Add an override\\'])[1]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MentorAvailability.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[90m// Add available date\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mAddAvailableDate\u001b[39m() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAddOverrideBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Wait for 5 seconds for the overlay to load\u001b[39m\n \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[90m// Ensure NextMonthBtn is clickable and then click it\u001b[39m\u001b[0m\n\u001b[2m    at Availability.AddAvailableDate (C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorAvailability.js:26:35)\u001b[22m\n\u001b[2m    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentor\\Availability.spec.js:20:25\u001b[22m"
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//p[normalize-space()=\\'Availability\\'])[1]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MentorAvailability.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[90m// Navigate to Availability section\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mNavigatetoAvailability\u001b[39m() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAvailabilityBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \n \u001b[90m 18 |\u001b[39m         \u001b[90m// Scroll down the page to make sure content is loaded\u001b[39m\n \u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at Availability.NavigatetoAvailability (C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js:16:36)\u001b[22m\n\u001b[2m    at C:\\laragon\\www\\Automation_Suite_Intellex\\tests\\mentor\\Availability.spec.js:19:25\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-23T07:32:18.224Z",
+                      "startTime": "2025-02-10T03:24:21.530Z",
                       "attachments": [],
                       "errorLocation": {
-                        "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorAvailability.js",
-                        "column": 35,
-                        "line": 26
+                        "file": "C:\\laragon\\www\\Automation_Suite_Intellex\\page-objects\\MentorAvailability.js",
+                        "column": 36,
+                        "line": 16
                       }
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "skipped"
                 }
               ],
               "id": "d3dd3d76527f1a60e959-355e6f692dab82f7dcce",
@@ -1518,24 +1108,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 8,
-                      "status": "passed",
-                      "duration": 30966,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully viewed availability\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:38:46.433Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "d3dd3d76527f1a60e959-4c3ffd5d172061383acd",
@@ -1571,24 +1145,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "status": "passed",
-                      "duration": 47185,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sucessfully checked cancelled booking session\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:32:32.969Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "27cfbe80da1e99601698-ab6dfa3459d000d41497",
@@ -1607,24 +1165,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "status": "passed",
-                      "duration": 36219,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sucessfully checked pending booking session\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:20.435Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "27cfbe80da1e99601698-d85511d70c2fe88bf993",
@@ -1643,24 +1185,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "status": "passed",
-                      "duration": 37324,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sucessfully checked upcoming booking session\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:56.666Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "27cfbe80da1e99601698-5b832ab660432cd54ff8",
@@ -1679,24 +1205,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "status": "passed",
-                      "duration": 41487,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sucessfully checked history booking session\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:34:34.005Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "27cfbe80da1e99601698-a99b7febf865cfd39873",
@@ -1732,20 +1242,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 29083,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:04.844Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "e0c445a0333c85d7c684-f5a27fbf4cbaab28e29b",
@@ -1755,7 +1253,7 @@
             },
             {
               "title": "Login successfully with valid credentials and change password",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1764,44 +1262,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "failed",
-                      "duration": 247441,
-                      "error": {
-                        "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//button[normalize-space()=\\'Account settings\\']')\u001b[22m\n",
-                        "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//button[normalize-space()=\\'Account settings\\']')\u001b[22m\n\n    at MentorProfile.PasswordChange (C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorProfile.js:94:35)\n    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentor\\mentorProfile.spec.js:32:23",
-                        "location": {
-                          "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorProfile.js",
-                          "column": 35,
-                          "line": 94
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\MentorProfile.js:94\n\n\u001b[0m \u001b[90m 92 |\u001b[39m\n \u001b[90m 93 |\u001b[39m         \u001b[36masync\u001b[39m \u001b[33mPasswordChange\u001b[39m(currentPass\u001b[33m,\u001b[39mnewPass) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 94 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAccountBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 95 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mchangeBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mcurrentpassBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mcurrentpassBtn\u001b[33m.\u001b[39mfill(currentPass)\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorProfile.js",
-                            "column": 35,
-                            "line": 94
-                          },
-                          "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//button[normalize-space()=\\'Account settings\\']')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\MentorProfile.js:94\n\n\u001b[0m \u001b[90m 92 |\u001b[39m\n \u001b[90m 93 |\u001b[39m         \u001b[36masync\u001b[39m \u001b[33mPasswordChange\u001b[39m(currentPass\u001b[33m,\u001b[39mnewPass) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 94 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAccountBtn\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 95 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mchangeBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mcurrentpassBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mcurrentpassBtn\u001b[33m.\u001b[39mfill(currentPass)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at MentorProfile.PasswordChange (C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorProfile.js:94:35)\u001b[22m\n\u001b[2m    at C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\tests\\mentor\\mentorProfile.spec.js:32:23\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:33.936Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\Users\\Dell\\Desktop\\Intellex-Automation-Project_playwright\\page-objects\\MentorProfile.js",
-                        "column": 35,
-                        "line": 94
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "e0c445a0333c85d7c684-e57587b8181644ac71b9",
@@ -1820,24 +1282,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 7,
-                      "status": "passed",
-                      "duration": 32673,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sucessfully See all Notifications\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:37:42.456Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "e0c445a0333c85d7c684-b0297bd043d910996660",
@@ -1856,24 +1302,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 7,
-                      "status": "passed",
-                      "duration": 25681,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sucessfully See Mentors own profile\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:38:15.416Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "e0c445a0333c85d7c684-e0c82e59adc837e98406",
@@ -1892,24 +1322,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 7,
-                      "status": "passed",
-                      "duration": 51109,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Sucessfully Updated Mentor Bio\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:38:41.110Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "e0c445a0333c85d7c684-1da73d7880d192e3223e",
@@ -1945,28 +1359,8 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 18844,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "\u001b[33mtrue\u001b[39m\n"
-                        }
-                      ],
-                      "stderr": [
-                        {
-                          "text": "Unexpected result: Neither success nor error message is displayed.\n"
-                        }
-                      ],
-                      "retry": 0,
-                      "startTime": "2024-12-23T07:33:06.964Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "17d3bc7fc7ace7b1184e-889470bf08b83d3f22d5",
@@ -1981,10 +1375,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-23T07:31:36.437Z",
-    "duration": 784725.029,
-    "expected": 36,
-    "skipped": 3,
+    "startTime": "2025-02-10T03:22:52.944Z",
+    "duration": 143956.628,
+    "expected": 2,
+    "skipped": 36,
     "unexpected": 4,
     "flaky": 0
   }

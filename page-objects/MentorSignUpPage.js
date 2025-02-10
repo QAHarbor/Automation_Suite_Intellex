@@ -25,7 +25,7 @@ class MentorSignUpPage {
     }
 
     async navigateToSignUp() {
-        await this.page.goto('https://intellex-academic-core.vercel.app/');
+        await this.page.goto('https://intellex-stagging.vercel.app/');
         await this.joinUsButton.click();
         await this.joinAsMentorButton.click();
     }
