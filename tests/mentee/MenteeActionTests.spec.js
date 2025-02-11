@@ -23,26 +23,22 @@ test.describe('Mentee Action TestCases', () => {
   });
 
   test('Navigate to Browse Mentor page successfully', async ({ page }) => {
-    // Use the menteeAction instance here
+    const mentorName = process.env.MENTOR_NAME || 'Hasnain Nisan';
+
     await menteeAction.navigateToBrowsePage();
+    await menteeAction.FilterBySearchbar(mentorName);
+    await menteeAction.SelectSearchProfile(mentorName);
 
-    // Filter mentors by search bar
-    await menteeAction.FilterBySearchbar('tony');
+    // Ensure the profile name is visible before asserting
+    const profileNameLocator = page.locator('h2.username');
+    // await profileNameLocator.waitFor();
+    await expect(profileNameLocator).toHaveText(mentorName);
 
-    // Select the desired mentor profile
-    await menteeAction.SelectSearchProfile();
-
-    // Validate the mentor profile name
-   
-
-    console.log('Successfully found Tony');
+    console.log('Assertion Passed: Successfully found', mentorName);
   });
 
   test('Search with no results displays the correct message', async ({ page }) => {
-    // Use the menteeAction instance here
     await menteeAction.navigateToBrowsePage();
-
-    // Filter mentors with an invalid search query
     await menteeAction.FilterBySearchbar('123');
 
     // Validate the "Showing 0 results" message
@@ -55,42 +51,29 @@ test.describe('Mentee Action TestCases', () => {
   });
 
   test('Add mentor to favorite list', async ({ page }) => {
-    // Use the menteeAction instance here
+    const mentorName = process.env.MENTOR_NAME || 'Hasnain Nisan';
     await menteeAction.navigateToBrowsePage();
-
-    // Filter mentors by search bar
-    await menteeAction.FilterBySearchbar('tony');
-
-    // Select the desired mentor profile
-    await menteeAction.SelectSearchProfile();
-
-    // Add mentor to favorites
+    await menteeAction.FilterBySearchbar(mentorName);
+    await menteeAction.SelectSearchProfile(mentorName);
     await menteeAction.AddFavorite();
 
-    console.log('Successfully added mentor to the favorite list.');
+    console.log('Assertion Passed: Successfully added mentor to the favorite list.');
   });
 
   test('Remove mentor from favorite list', async ({ page }) => {
-    // Use the menteeAction instance here
+    const mentorName = process.env.MENTOR_NAME || 'Hasnain Nisan';
     await menteeAction.navigateToBrowsePage();
-
-    // Filter mentors by search bar
-    await menteeAction.FilterBySearchbar('tony');
-
-    // Select the desired mentor profile
-    await menteeAction.SelectSearchProfile();
-
-    // Remove mentor from favorites
+    await menteeAction.FilterBySearchbar(mentorName);
+    await menteeAction.SelectSearchProfile(mentorName);
     await menteeAction.RemoveFavorite();
 
-    console.log('Successfully removed mentor from the favorite list.');
+    console.log('Assertion Passed: Successfully removed mentor from the favorite list.');
   });
 
   test('Mentee can see all events', async ({ page }) => {
-    // Use the menteeAction instance here
     await menteeAction.CheckingDetails();
 
-    console.log('Successfully validated mentee can see all events according to schedule.');
+    console.log('Assertion Passed: Successfully validated mentee can see all events according to schedule.');
     await page.pause();
   });
 });

@@ -19,6 +19,7 @@
     "module-alias": "^2.2.2"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.4.0",
     "dotenv": "^16.4.7"
   },
   "_moduleAliases": {

@@ -1,3 +1,5 @@
+const { faker } = require('@faker-js/faker');
+
 require('dotenv').config(); // Load environment variables
 
 module.exports = {
@@ -12,12 +14,13 @@ module.exports = {
             password: process.env.INVALID_PASSWORD,
         },
     },
-//For Valid Mentee SignUp
-    ValidMentee_SignUp:{
-        firstName: 'John',
-        lastName: 'Doe',
-        email:'jon@yopmail.com', 
-        password:'Test@12345678', 
+    //For Valid Mentee SignUp
+    ValidMentee_SignUp: {
+        firstName: faker.person.firstName(),
+        lastName: faker.person.lastName(),
+        email: faker.internet.email(),
+        password: 'Test@12345678',
+        dob: '01-01-1990',
     },
 
     // URLs Section: for base URLs and portal URLs

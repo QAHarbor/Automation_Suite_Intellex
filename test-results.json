@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -57,25 +57,25 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.49.1",
-    "workers": 4,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "home\\FooterTests.spec.js",
-      "file": "home/FooterTests.spec.js",
+      "title": "mentee\\menteeSignUp.spec.js",
+      "file": "mentee/menteeSignUp.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Home Page Navigation Tests",
-          "file": "home/FooterTests.spec.js",
-          "line": 4,
+          "title": "Mentee SignUp Tests",
+          "file": "mentee/menteeSignUp.spec.js",
+          "line": 7,
           "column": 6,
           "specs": [
             {
-              "title": "Successful Navihate to Terms Condition Page",
+              "title": "Navigate to SignUp page and then Terms and Condition Page",
               "ok": true,
               "tags": [],
               "tests": [
@@ -87,9 +87,9 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 0,
                       "status": "passed",
-                      "duration": 24178,
+                      "duration": 26686,
                       "errors": [],
                       "stdout": [
                         {
@@ -98,394 +98,17 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-10T06:45:40.887Z",
+                      "startTime": "2025-02-11T05:07:03.305Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "fad340b25582eacfb966-42bc4e9de3392eb21421",
-              "file": "home/FooterTests.spec.js",
-              "line": 5,
-              "column": 7
-            },
-            {
-              "title": "Successful Navigation to About Us Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 24222,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Assertion Passed: Header text is correct\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:46:05.508Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fad340b25582eacfb966-2282f9fffeae32d884c3",
-              "file": "home/FooterTests.spec.js",
-              "line": 16,
-              "column": 7
-            },
-            {
-              "title": "Successful Navigation to Become Mentee Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 2183,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Assertion Passed: Mentee Sign Up page displayed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:46:29.740Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fad340b25582eacfb966-bb81ef972e084391e3e4",
-              "file": "home/FooterTests.spec.js",
-              "line": 27,
-              "column": 7
-            },
-            {
-              "title": "Successful Navigation Become Mentor Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 3468,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Become Mentor Page\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:46:31.935Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fad340b25582eacfb966-f8b80752bb2e414c099c",
-              "file": "home/FooterTests.spec.js",
-              "line": 35,
-              "column": 7
-            },
-            {
-              "title": "Successful Navigation to Find Mentor",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 3006,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Find Mentor Page\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:46:35.413Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fad340b25582eacfb966-6a32d4624360761af2e6",
-              "file": "home/FooterTests.spec.js",
-              "line": 43,
-              "column": 7
-            },
-            {
-              "title": "Successful Navigation to Privacy page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 23261,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Assertion Passed: Header text matches \"Privacy Policy\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:46:38.428Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fad340b25582eacfb966-319c45a009c7b8d8bc4a",
-              "file": "home/FooterTests.spec.js",
-              "line": 51,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "home\\HomePage.spec.js",
-      "file": "home/HomePage.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Home Page Navigation Tests",
-          "file": "home/HomePage.spec.js",
-          "line": 5,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Successful Navigation to Join as Mentor Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 31241,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Join as Mentor.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:45:40.919Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a02391dad5b2ae76e406-06ddb713a65e3ebe0584",
-              "file": "home/HomePage.spec.js",
-              "line": 6,
-              "column": 9
-            },
-            {
-              "title": "Successful Navigation to Find Mentor Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 48388,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Heading Text: Mentors\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:46:12.620Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a02391dad5b2ae76e406-66601a13622fbea83718",
-              "file": "home/HomePage.spec.js",
-              "line": 20,
-              "column": 9
-            },
-            {
-              "title": "Successful Navigation to Home Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 2411,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Home page.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:47:01.018Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a02391dad5b2ae76e406-1a1bf411fcf65c34c3f1",
-              "file": "home/HomePage.spec.js",
-              "line": 33,
-              "column": 9
-            },
-            {
-              "title": "Successful Navigation to Mentee Create Account Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 22298,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Mentee Create Account page.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:47:03.452Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a02391dad5b2ae76e406-95c1bef67634889cd6f0",
-              "file": "home/HomePage.spec.js",
-              "line": 41,
-              "column": 9
-            },
-            {
-              "title": "Successful Navigation to Mentor Filter Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 27950,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Successfully navigated to Mentor Filter page.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-10T06:47:25.758Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a02391dad5b2ae76e406-1fae7193976772f15668",
-              "file": "home/HomePage.spec.js",
+              "id": "6bcb8247865cb5651b25-402430e2bf493cc4ceb8",
+              "file": "mentee/menteeSignUp.spec.js",
               "line": 53,
-              "column": 9
+              "column": 7
             }
           ]
         }
@@ -494,9 +117,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-10T06:45:39.008Z",
-    "duration": 135244.79200000002,
-    "expected": 11,
+    "startTime": "2025-02-11T05:06:58.598Z",
+    "duration": 31878.165,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
