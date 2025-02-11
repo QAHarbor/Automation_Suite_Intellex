@@ -17,8 +17,8 @@ module.exports = {
     },
 
     validVolunteer: {
-        email:'aaa@yopmail.com',
-        password:'Testdata@123' 
+        email:'hasnainnisan1@gmail.com',
+        password:'Password#123' 
     },
    
     invalidMentorDetails: {
