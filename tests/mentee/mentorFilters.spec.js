@@ -23,9 +23,9 @@ test.describe('Mentor Filters and Tab Navigation Tests', () => {
     await authPage.navigateToLogin(urls.baseUrl);
     await authPage.login(credentials.valid.email, credentials.valid.password);
 
-   
 
-     
+
+
 
     // Navigate to mentor filtering page (assumed URL)
     // Example: await page.goto(MentorFiltersPage.navigateMentorPage());
@@ -34,11 +34,11 @@ test.describe('Mentor Filters and Tab Navigation Tests', () => {
   // Test case 1: Successfully apply checkbox filters and verify selection
   test('Successfully applies checkbox filters and verifies selection', async ({ page }) => {
 
-     // Assert login was successful by checking a user-specific element
-     //await expect(page.getByRole('link', { name: 'Browse Mentor' })).toBeVisible({ timeout: 5000 });
+    // Assert login was successful by checking a user-specific element
+    //await expect(page.getByRole('link', { name: 'Browse Mentor' })).toBeVisible({ timeout: 5000 });
 
-     // Navigate to Browse Mentors page
-     await page.getByRole('link', { name: 'Browse Mentor' }).click();
+    // Navigate to Browse Mentors page
+    await page.getByRole('link', { name: 'Browse Mentor' }).click();
 
     // Select 'Interview Preparation' filter
     await mentorFiltersPage.checkInterviewPreparation();
@@ -48,7 +48,7 @@ test.describe('Mentor Filters and Tab Navigation Tests', () => {
     await mentorFiltersPage.checkNetworking();
     expect(await mentorFiltersPage.isNetworkingChecked()).toBeTruthy();
 
-   
+
     // Clear filters and verify
     await mentorFiltersPage.clearFilters();
     expect(await mentorFiltersPage.areFiltersCleared()).toBeTruthy();
@@ -57,23 +57,23 @@ test.describe('Mentor Filters and Tab Navigation Tests', () => {
   // Test case 2: Switch tabs and verify they are active
   test('Switches tabs and verifies the active tab', async ({ page }) => {
 
-     // Navigate to Browse Mentors page
-     await page.getByRole('link', { name: 'Browse Mentor' }).click();
-     
+    // Navigate to Browse Mentors page
+    await page.getByRole('link', { name: 'Browse Mentor' }).click();
+
     // Switch to "Accounting" tab and verify it is selected
     await mentorFiltersPage.selectAccountingTab();
-   // await mentorFiltersPage.isTabSelected('Accounting');
+    // await mentorFiltersPage.isTabSelected('Accounting');
 
     // Switch to "Education" tab and verify it is selected
     await mentorFiltersPage.selectEducationTab();
-   // await mentorFiltersPage.isTabSelected('Education');
+    // await mentorFiltersPage.isTabSelected('Education');
 
     // Switch to "Engineering" tab and verify it is selected
     await mentorFiltersPage.selectEngineeringTab();
-   // await mentorFiltersPage.isTabSelected('Engineering');
+    // await mentorFiltersPage.isTabSelected('Engineering');
 
     // Switch to "Technology" tab and verify it is selected
     await mentorFiltersPage.selectTechnologyTab();
-   // await mentorFiltersPage.isTabSelected('Technology');
+    // await mentorFiltersPage.isTabSelected('Technology');
   });
 });

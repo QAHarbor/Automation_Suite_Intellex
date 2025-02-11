@@ -15,6 +15,13 @@ test.describe('Mentor Availability Tests', () => {
     await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
     await page.waitForTimeout(5000);
 
+    // Wait for success message
+    const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
+    await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
+
+    // Wait for navigation to portal
+    await page.waitForURL(`${process.env.PORTAL_URL}`);
+
     const availablepage = new Availability(page);
     await availablepage.NavigatetoAvailability();
     await availablepage.AddAvailableDate();
@@ -24,17 +31,29 @@ test.describe('Mentor Availability Tests', () => {
   });
 
   // Test Case: Mentor can view availability
-  test('Able to see availability', async ({ page }) => {
-    const mentorloginpage = new AuthPage(page);
+  test('User can view availability', async ({ page }) => {
+    const mentorLoginPage = new AuthPage(page);
 
-    await mentorloginpage.navigateToLogin(urls.baseUrl);
-    await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
-    await page.waitForTimeout(2000);
+    // Navigate to login page
+    await mentorLoginPage.navigateToLogin(urls.baseUrl);
+    await mentorLoginPage.login(validMentorLogin.email, validMentorLogin.password);
 
-    const availablepage = new Availability(page);
-    await availablepage.NavigatetoAvailability();
+    // Wait for success message
+    const successMessage = page.locator('.success'); // Update class if needed
+    await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
 
-    // Pause to allow manual inspection (can be removed later)
-    console.log('Successfully viewed availability');
+    // Wait for navigation to the portal
+    await expect(page).toHaveURL(`${process.env.PORTAL_URL}`);
+
+    // Navigate to the availability page
+    const availablePage = new Availability(page);
+    await availablePage.NavigatetoAvailability();
+
+    // Verify availability section is visible
+    const availabilitySection = page.getByText('Monday'); // Ensure correct selector
+    await expect(availabilitySection).toBeVisible({ timeout: 5000 });
+
+    console.info('✅ Availability page is successfully loaded and visible.');
   });
+
 });
