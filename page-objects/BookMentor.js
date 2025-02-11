@@ -20,18 +20,33 @@ class BookMentor {
         // Set viewport size
         await this.page.setViewportSize({ width: 1200, height: 800 });
 
-        // Select session date and time
-        await this.selctCalender.click();
-        await this.timeselect.click();
-        await this.BooknowBtn.click();
+        // Wait for the calendar to be fully loaded
+        await this.page.waitForSelector('.MuiPickersDay-root.is-available'); // Ensure that we target available days
 
-        // Enter payment details in iframe
-        await this.CardNumberInput.fill(cardnumber);
-        await this.ExpiryDateInput.fill(expirydate);
-        await this.SecurityCode.fill(securitycode);
+        // Get all available dates
+        const availableDates = await this.page.$$('.MuiPickersDay-root.is-available'); // Filter by the is-available class
+        const randomIndex = Math.floor(Math.random() * availableDates.length);
+        await availableDates[randomIndex].click();
 
-        // Confirm payment
-        await this.ConfirmPayBtn.click();
+        // await this.page.waitForLoadState('domcontentloaded');
+
+        // Select a random radio button
+        await this.page.waitForSelector(`input.PrivateSwitchBase-input[type="radio"]`);
+        const radioButtons = await this.page.$$('input.PrivateSwitchBase-input[type="radio"]');
+        console.log(radioButtons.length);
+        const randomIndexSlot = Math.floor(Math.random() * radioButtons.length);
+        console.log(randomIndexSlot);
+        await radioButtons[randomIndexSlot].click();
+        
+        // await this.BooknowBtn.click();
+
+        // // Enter payment details in iframe
+        // await this.CardNumberInput.fill(cardnumber);
+        // await this.ExpiryDateInput.fill(expirydate);
+        // await this.SecurityCode.fill(securitycode);
+
+        // // Confirm payment
+        // await this.ConfirmPayBtn.click();
     }
 
     getConfirmMessage() {
