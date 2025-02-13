@@ -11,12 +11,12 @@ class MentorSignUpPage {
         this.timezoneOption = page.locator("(//li[@id=':r6:-option-3'])[1]");
         this.agreeButton = page.locator("(//span[@class='MuiTouchRipple-root mui-w0pj6f'])[4]");
         this.industryInput = page.locator('input[placeholder="Select industries"]');
-        this.industryOption = page.locator('(//li[text()="Accounting"])[1]');
+
+        this.industryOption = page.locator("(//input[@type='checkbox'])[2]");
 
         this.skillsInput = page.locator('input[placeholder="Select skills"]');
-        
-        // Use aria-label for selecting the checkbox
-        this.skillCheckbox = page.locator('input[aria-label="controlled"]');  // Updated to use aria-label
+        this.skillCheckbox = page.locator("(//input[@type='checkbox'])[2]");
+    
 
         this.jobTitleInput = page.locator('input[placeholder="Enter your job title"]');
         this.companyInput = page.locator('input[placeholder="Enter your company"]');
@@ -25,7 +25,7 @@ class MentorSignUpPage {
     }
 
     async navigateToSignUp() {
-        await this.page.goto('https://intellex-stagging.vercel.app/');
+        await this.page.goto(process.env.BASE_URL);
         await this.joinUsButton.click();
         await this.joinAsMentorButton.click();
     }
@@ -40,12 +40,13 @@ class MentorSignUpPage {
         await this.agreeButton.click();
         await this.industryInput.click();
         await this.industryOption.click();
+        await this.page.click("body");
+
         await this.skillsInput.click();
 
-        // Ensure the checkbox is checked using the correct selector
-        await this.skillCheckbox.check();  // This checks the checkbox
-        // You can also check if the checkbox is checked for debugging
-        console.log(await this.skillCheckbox.isChecked()); // Should return true if checked
+        await this.skillCheckbox.check(); 
+        await this.page.click("body");
+
         
         await this.jobTitleInput.fill(jobTitle);
         await this.companyInput.fill(company);

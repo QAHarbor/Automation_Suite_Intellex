@@ -14,9 +14,15 @@ class MentorFiltersPage {
     this.educationTab = page.locator('button[role="tab"]:has-text("Education")');
     this.engineeringTab = page.locator('button[role="tab"]:has-text("Engineering")');
     this.technologyTab = page.locator('button[role="tab"]:has-text("Technology")');
-  }
 
-  // Checkbox Filter Methods
+    //Timezone selection
+    this.TimeZoneBtn = page.locator("(//input[@id=':r1:'])[1]");
+
+   //Select Price range
+   this.minField = page.locator('#minPrice');
+   this.maxField = page.locator('#maxPrice');
+
+  }
 
   // Select 'Interview Preparation' checkbox
   async checkInterviewPreparation() {
@@ -70,7 +76,18 @@ class MentorFiltersPage {
     await this.technologyTab.click();
   }
 
-  
+  async SelectTimeZone(){
+    await this.TimeZoneBtn.click();
+    await this.TimeZoneBtn.waitFor({ state: 'visible' });
+    await this.TimeZoneBtn.fill("Australia/Broken Hill (ACDT)");
+  }
+
+  async SelectPriceRange(){
+    await this.minField.click();
+    await this.minField.fill('10');
+    await this.maxField.click();
+    await this.maxField.fill('30');
+  }
 
 }
 

@@ -65,29 +65,7 @@ class MenteeProfilePage {
         await this.page.getByLabel('controlled').check();
         await this.page.getByRole('button', { name: 'Save' }).click();
     }
-
-    // async setValidProfilePicture() {
-    //     // Click the Edit Picture button to start the profile picture update process
-    //     await this.page.getByRole('button', { name: 'Edit Picture' }).click();
     
-    //     // Click the edit button to start uploading
-    //     await this.page.locator('button.MuiButtonBase-root.mui-vlhhjv').click();
-    
-    //     // Click the 'Choose a file' button to open the file selector
-    //     await this.page.getByRole('button', { name: 'Choose a file' }).click();
-    
-    //     // Set a valid image (e.g., a PNG file) using the relative image path
-    //     const validImagePath = 'intellex-academic-core-Automaiton-main/Source/pic.png';
-    //     await this.page.locator('input[type="file"]').setInputFiles(validImagePath);
-    
-    //     // Click Save button to upload the valid image
-    //     await this.page.getByRole('button', { name: 'Save' }).click();
-    
-    
-       
-    // }
-    
-
 
 
 

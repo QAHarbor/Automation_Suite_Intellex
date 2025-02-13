@@ -17,8 +17,7 @@ test.describe('Mentee SignUp Tests', () => {
       ValidMentee_SignUp.password,
       ValidMentee_SignUp.dob
     );
-
-    // Wait for success message
+    
     const successMessage = page.locator('.success');
     await expect(successMessage).toHaveText('User created successfully. Please check your email to verify your account.', { timeout: parseInt(process.env.TIMEOUT) });
 

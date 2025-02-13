@@ -33,8 +33,7 @@ test.describe('Mentee Login and Booking Process Tests', () => {
         await filterSearch.FilterBySearchbar(mentorName)
         await page.waitForLoadState('domcontentloaded');
 
-        // const Searchselect = new MenteeAction (page);
-        // await Searchselect.SelectSearchProfile(mentorName);
+   
 
         const mentorCard = page.locator(`p.MuiTypography-body1:has-text("${mentorName}")`);
         await mentorCard.waitFor();
@@ -44,7 +43,7 @@ test.describe('Mentee Login and Booking Process Tests', () => {
         const Mentorbooking = new BookMentor(page);
         await Mentorbooking.BookingMentor('4000 0503 6000 0019','12 / 25','123');
 
-        // await page.waitForTimeout(8000);
+    
 
       
         console.log('Booking confirmed and returned to the home page.');

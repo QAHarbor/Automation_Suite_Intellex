@@ -47,7 +47,4 @@ test('should sign up mentor successfully with valid credentials and handle dupli
     }
 });
 
-
-    // Test Case 2: Mentor SignUp with Invalid Credentials
-   
 });

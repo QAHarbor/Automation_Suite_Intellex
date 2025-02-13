@@ -9,7 +9,7 @@ const { validCredentials, urls } = require('@fixtures/test-data');
 test.describe('Mentee Action TestCases', () => {
   let authPage;
   let mentorFiltersPage;
-  let menteeAction; // Declare menteeAction here
+  let menteeAction; 
 
   // Before each test, initialize pages and log in
   test.beforeEach(async ({ page }) => {

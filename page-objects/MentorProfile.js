@@ -68,9 +68,6 @@ class MentorProfile {
     async UpdateBio(intro, experience, education, reason, advice) {
 
         await this.BioTab.click();
-
-
-
         await this.IntroInput.click();
         await this.IntroInput.fill(intro);
 

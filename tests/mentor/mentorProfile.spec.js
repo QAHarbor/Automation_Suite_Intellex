@@ -86,7 +86,7 @@ test.describe('Mentor Profile Test Cases', () => {
 
     await page.waitForTimeout(parseInt(process.env.TIMEOUT));
 
-    // Add the final check or any expectations needed
+
     console.log('Sucessfully Updated Mentor Bio');
 
   });

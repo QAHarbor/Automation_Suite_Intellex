@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import AuthPage from '@page-objects/AuthPage';  // Alias for page objects
-import MentorFiltersPage from '@page-objects/MentorFilters.page';  // Import the new page object
-import { credentials, mentorFilters } from '@fixtures/test-data-mentee'; // Import the necessary test data
+import AuthPage from '@page-objects/AuthPage';  
+import MentorFiltersPage from '@page-objects/MentorFilters.page';  
+import { credentials, mentorFilters } from '@fixtures/test-data-mentee'; 
 const { validCredentials, urls } = require('@fixtures/test-data');
 
 
@@ -23,20 +23,12 @@ test.describe('Mentor Filters and Tab Navigation Tests', () => {
     await authPage.navigateToLogin(urls.baseUrl);
     await authPage.login(credentials.valid.email, credentials.valid.password);
 
-
-
-
-
-    // Navigate to mentor filtering page (assumed URL)
-    // Example: await page.goto(MentorFiltersPage.navigateMentorPage());
   });
 
-  // Test case 1: Successfully apply checkbox filters and verify selection
+
   test('Successfully applies checkbox filters and verifies selection', async ({ page }) => {
 
-    // Assert login was successful by checking a user-specific element
-    //await expect(page.getByRole('link', { name: 'Browse Mentor' })).toBeVisible({ timeout: 5000 });
-
+  
     // Navigate to Browse Mentors page
     await page.getByRole('link', { name: 'Browse Mentor' }).click();
 
@@ -76,4 +68,23 @@ test.describe('Mentor Filters and Tab Navigation Tests', () => {
     await mentorFiltersPage.selectTechnologyTab();
     // await mentorFiltersPage.isTabSelected('Technology');
   });
+
+  test('Mentee Successfully See Courses after selecting timezone', async ({ page }) => {
+    await page.getByRole('link', { name: 'Browse Mentor' }).click();
+    // Update interests and select timezone
+    await mentorFiltersPage.SelectTimeZone();
+  
+  });
+
+  test('Mentee Successfully See Courses based on Price Ranges', async ({ page }) => {
+    await page.getByRole('link', { name: 'Browse Mentor' }).click();
+    // Update interests and select timezone
+    await mentorFiltersPage.SelectPriceRange();
+    await page.waitForTimeout(500);
+  
+  });
+
+
+
+
 });

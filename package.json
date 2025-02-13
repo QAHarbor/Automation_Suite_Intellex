@@ -12,7 +12,8 @@
   "description": "",
   "devDependencies": {
     "@babel/register": "^7.25.9",
-    "@playwright/test": "^1.49.1",
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.2",
     "allure-commandline": "^2.32.0",
     "allure-playwright": "^3.0.7",
     "babel-plugin-module-resolver": "^5.0.2",
