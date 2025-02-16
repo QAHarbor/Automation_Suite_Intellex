@@ -54,8 +54,6 @@ class MentorFiltersPage {
     return !(await this.isInterviewPreparationChecked()) && !(await this.isNetworkingChecked());
   }
 
-  // Tab Navigation Methods
-
   // Switch to 'Accounting' tab
   async selectAccountingTab() {
     await this.accountingTab.click();

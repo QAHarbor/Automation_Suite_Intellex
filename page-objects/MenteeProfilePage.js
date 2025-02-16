@@ -1,8 +1,8 @@
 class MenteeProfilePage {
     constructor(page) {
         this.page = page;
-        this.baseUrl = process.env.BASE_URL || `${this.baseUrl}`; // Fallback to the default URL if not set
-        this.profileUrl = process.env.PROFILE_URL || `${this.baseUrl}/portal/profile`; // Profile URL
+        this.baseUrl = process.env.BASE_URL || `${this.baseUrl}`; 
+        this.profileUrl = process.env.PROFILE_URL || `${this.baseUrl}/portal/profile`; 
         console.log(this.profileUrl);
     }
 
@@ -38,7 +38,6 @@ class MenteeProfilePage {
     }
 
     async getPersonalDetails() {
-        // Example: Replace selectors with actual ones from your application
         const firstName = await this.page.getByPlaceholder('Enter your first name').inputValue();
         const lastName = await this.page.getByPlaceholder('Enter your last name').inputValue();
         return { firstName, lastName };
@@ -52,7 +51,7 @@ class MenteeProfilePage {
     }
 
     async getBio() {
-        // Example: Replace selectors with actual ones from your application
+    
         await this.page.getByRole('tab', { name: 'Bio' }).click();
         const bioText = await this.page.getByPlaceholder('Write a few sentence about').inputValue();
         return bioText;
@@ -70,15 +69,14 @@ class MenteeProfilePage {
 
 
     async getInterests() {
-        // Example: Replace selectors with actual ones from your application
+    
         const interestsText = await this.page.getByRole('tab', { name: 'My interests/preferences' }).textContent();
         return interestsText;
     }
 
     async setInvalidProfilePicture() {
         await this.page.getByRole('button', { name: 'Edit Picture' }).click();
-        // Implement logic to upload an invalid image format
-        // await this.page.setInputFiles('input[type="file"]', 'path/to/invalidImage.pdf');
+        
     }
 
     async validateBlankRequiredFields() {
