@@ -30,7 +30,7 @@ class SignUp_Mentee {
 
     async selectRandomAustraliaTimezone() {
         await this.timezoneInput.click();
-        await this.page.waitForTimeout(500); // Wait for dropdown to open
+        await this.page.waitForTimeout(500); 
     
         const optionsCount = await this.timezoneOptions.count();
         if (optionsCount > 0) {
@@ -50,10 +50,10 @@ class SignUp_Mentee {
         await this.email.fill(email);
         await this.password.fill(password);
         await this.page.evaluate(() => window.scrollBy(0, window.innerHeight));
-        await this.selectRandomAustraliaTimezone(); // Selects a random Australia timezone
+        await this.selectRandomAustraliaTimezone(); 
         await this.AgreeContinue.click();
 
-        // Select random options from the dropdown
+        
         await this.Industeries.click();
         const industryOptions = await this.page.$$('li.MuiAutocomplete-option');
         for (let index of randomIndices) {
@@ -62,7 +62,7 @@ class SignUp_Mentee {
         }
         await page.click('body');
 
-        // Select random options from the dropdown
+       
         await this.skill.click();
         const skillOptions = await this.page.$$('li.MuiAutocomplete-option');
         for (let index of randomIndices) {

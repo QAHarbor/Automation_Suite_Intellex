@@ -24,10 +24,10 @@ class MenteeAction {
 
     async navigateToBrowsePage() {
 
-        // Set viewport size
+
         await this.page.setViewportSize({ width: 1200, height: 800 });
 
-        // Wait for the Browse button to be visible and click it
+
         await this.BrowseBtn.waitFor();
         await this.BrowseBtn.click();
     }
@@ -46,15 +46,12 @@ class MenteeAction {
     }
 
 
-
-
-    // Wait for the Search bar to be visible and click it
     async FilterBySearchbar(MentorName) {
 
         await this.SearchBar.click();
         await this.SearchBar.fill(MentorName);
         await this.page.evaluate(() => {
-            window.scrollBy(0, window.innerHeight); // Scroll down by one viewport height
+            window.scrollBy(0, window.innerHeight); 
         });
     }
 
