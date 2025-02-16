@@ -9,6 +9,12 @@ class Availability {
         this.datePickBtn = page.locator("(//button[normalize-space()='15'])[1]");
         this.AddSaveBtn = page.locator("(//button[normalize-space()='Add override'])[1]");
         this.FinalSaveBtn = page.locator("(//button[normalize-space()='Save changes'])[1]");
+
+
+
+
+      
+
     }
 
     // Navigate to Availability section
@@ -36,6 +42,14 @@ class Availability {
         await this.AddSaveBtn.click();
         await this.FinalSaveBtn.click();
     }
-}
+
+
+
+   
+
+   
+    }
+    
+
 
 module.exports = Availability;

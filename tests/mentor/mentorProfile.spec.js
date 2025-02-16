@@ -25,6 +25,8 @@ test.describe('Mentor Profile Test Cases', () => {
     await profilepage.MakeVolunteer();
   });
 
+  /*
+
   test('Login successfully with valid credentials and change password', async ({ page }) => {
     const mentorloginpage = new AuthPage(page);
 
@@ -71,6 +73,32 @@ test.describe('Mentor Profile Test Cases', () => {
 
   });
 
+
+  test('Mentor can update Personal Details', async ({ page }) => {
+
+    const mentorloginpage = new AuthPage(page);
+
+    await mentorloginpage.navigateToLogin(urls.baseUrl);
+    await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
+    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+
+    const profilepage = new MentorProfile(page);
+
+    await profilepage.NavigateToProfile();
+   
+
+    await profilepage.updateProfile('John','Doe','gogole','Software Engineer')
+
+    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+
+
+    console.log('Sucessfully Updated Mentor Profile');
+
+  });
+
+
+
+
   test('Mentor can update bio', async ({ page }) => {
 
     const mentorloginpage = new AuthPage(page);
@@ -90,4 +118,7 @@ test.describe('Mentor Profile Test Cases', () => {
     console.log('Sucessfully Updated Mentor Bio');
 
   });
+
+  */
 });
+

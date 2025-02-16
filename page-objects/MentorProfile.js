@@ -11,6 +11,14 @@ class MentorProfile {
         this.imageInput = page.locator('input[type="file"]');
         this.SaveBtn1 = page.getByRole('button', { name: 'Save' });
 
+        //Profile Information
+        this.firstName = page.getByRole('textbox', { name: 'First name *' });
+        this.lastName = page.getByRole('textbox', { name: 'Last name *' });
+        this.companyName = page.getByRole('textbox', { name: 'Company name *' });
+        this.jobTitle = page.getByRole('textbox', { name: 'Job title *' });
+        this.saveButton = page.getByRole('button', { name: 'Save' });
+
+
         //own profile
         this.VisitProfileBtn = page.locator("(//a[normalize-space()='View my profile'])[1]");
         //Notification
@@ -63,6 +71,15 @@ class MentorProfile {
         await this.VisitProfileBtn.click()
         await this.page.waitForTimeout(3000);
     }
+
+
+    async updateProfile(firstName, lastName, companyName, jobTitle) {
+        await this.firstName.fill(firstName);
+        await this.lastName.fill(lastName);
+        await this.companyName.fill(companyName);
+        await this.jobTitle.fill(jobTitle);
+        await this.saveButton.click();
+      }
 
 
     async UpdateBio(intro, experience, education, reason, advice) {

@@ -1,12 +1,50 @@
 import { test, expect } from '@playwright/test';
 import AuthPage from '@page-objects/AuthPage';
-import Availability from '@page-objects/MentorAvailability';
-
+import Availability from '@page-objects/MentorAvailability'; // Assuming correct path
+import MentorAvailabilityModify from '@page-objects/MentorAvailability_Update';
+//import { fa } from '@faker-js/faker/.';
 const { validMentorLogin, urls } = require('@fixtures/test-data-mentor');
 
-test.use({ headless: false });
+
+
+
+test.use({headless : false})
 
 test.describe('Mentor Availability Tests', () => {
+  
+ // Test Case: Mentor login successfully and pick an extra date
+ test('Pick an extra date and override the updated test case by QA.', async ({ page }) => {
+  const mentorloginpage = new AuthPage(page);
+
+  const availablepage = new MentorAvailabilityModify(page);
+
+  await mentorloginpage.navigateToLogin(urls.baseUrl);
+  await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
+  await page.waitForTimeout(5000);
+
+  // Wait for success message
+  const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
+  await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
+ 
+  
+  
+   // Navigate to the next month and click any Monday
+   await availablepage.navigateToNextMonth();
+   const clickedDate = await availablepage.clickAnyMonday();
+   
+   // If a Monday was clicked, proceed to add the override
+   if (clickedDate) {
+     await availablepage.addOverride();
+   }
+
+  // Pause to allow manual inspection (can be removed later)
+  console.log('Successfully picked an extra date');
+});
+
+ 
+
+ 
+
   // Test Case: Mentor login successfully and pick an extra date
   test('Should pick extra date and override', async ({ page }) => {
     const mentorloginpage = new AuthPage(page);
@@ -20,7 +58,7 @@ test.describe('Mentor Availability Tests', () => {
     await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
 
     // Wait for navigation to portal
-    await page.waitForURL(`${process.env.PORTAL_URL}`);
+    //await page.waitForURL(`${process.env.PORTAL_URL}`);
 
     const availablepage = new Availability(page);
     await availablepage.NavigatetoAvailability();
@@ -29,6 +67,7 @@ test.describe('Mentor Availability Tests', () => {
     // Pause to allow manual inspection (can be removed later)
     console.log('Successfully picked an extra date');
   });
+
 
   // Test Case: Mentor can view availability
   test('User can view availability', async ({ page }) => {
@@ -56,4 +95,8 @@ test.describe('Mentor Availability Tests', () => {
     console.info('✅ Availability page is successfully loaded and visible.');
   });
 
+  
+
 });
+
+

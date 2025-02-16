@@ -9,6 +9,14 @@ class Bookings {
         this.HistoryBtn = page.locator("//button[normalize-space()='History']");
         this.CancelBtn = page.locator("//button[normalize-space()='Cancelled']");
 
+
+
+
+ 
+  
+
+        
+
     }
 
     
@@ -35,6 +43,15 @@ class Bookings {
     }
 
 
-}
+
+    
+
+
+
+
+    }
+
+
+
 
 module.exports = Bookings;

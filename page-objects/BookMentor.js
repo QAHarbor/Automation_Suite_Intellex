@@ -14,6 +14,16 @@ class BookMentor {
 
         this.ConfirmPayBtn = page.getByRole('button', { name: 'Confirm and Pay' });
         this.ConfirmMessage = page.getByRole('heading', { name: 'Welcome back!' });
+
+
+
+          // Selectors
+    this.browseMentorLink = this.page.getByRole('link', { name: 'Browse Mentor' });
+    this.firstMentorButton = this.page.locator('button .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiCard-root').nth(0);
+    this.dateCell = this.page.getByRole('gridcell');
+    this.timeSlot = this.page.locator('div').filter({ hasText: /^10:00 AM$/ });
+    this.bookNowButton = this.page.getByRole('button', { name: 'Book now' });
+
     }
 
     async BookingMentor(cardnumber, expirydate, securitycode) {
@@ -49,9 +59,52 @@ class BookMentor {
         // await this.ConfirmPayBtn.click();
     }
 
+
     getConfirmMessage() {
         return this.ConfirmMessage;
     }
+
+ // code by qa
+
+ async browseMentors() {
+  await this.browseMentorLink.click();
+  await this.firstMentorButton.click();
+}
+
+async bookSession() {
+  await this.page.waitForTimeout(2000); // Wait for date options
+  
+  const today = new Date();
+  const futureDate = new Date(today);
+  futureDate.setDate(today.getDate() + 2);
+  const futureDay = futureDate.getDate().toString();
+
+  await this.page.getByRole('gridcell', { name: futureDay }).click();
+  await this.timeSlot.click();
+  await this.bookNowButton.click();
+  await this.page.waitForTimeout(5000); // Wait for session to be booked
+}
+
+async fillPaymentDetails(cardNumber, expiry, securityCode) {
+  const stripeIframe = await this.page.waitForSelector('iframe[name*="privateStripeFrame"]', { timeout: 30000 });
+  const stripeFrame = await stripeIframe.contentFrame();
+  if (!stripeFrame) throw new Error("Stripe iframe not found!");
+
+  // Fill in the card details
+  await stripeFrame.getByRole('textbox', { name: 'Card number' }).fill(cardNumber);
+  await stripeFrame.getByRole('textbox', { name: 'Expiration date MM / YY' }).fill(expiry);
+  await stripeFrame.getByRole('textbox', { name: 'Security code' }).fill(securityCode);
+  
+  await this.page.getByRole('button', { name: 'Confirm and Pay' }).click();
+
+  // Wait for the payment to process
+  await this.page.waitForTimeout(5000);
+}
+
+async returnHome() {
+  await this.page.waitForSelector('a:text("Return home")', { timeout: 30000 });
+  await this.page.getByRole('link', { name: 'Return home' }).click();
+}
 }
 
 module.exports = BookMentor;
