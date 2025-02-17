@@ -30,7 +30,7 @@ class MenteeProfilePage {
 
 
     async updatePersonalDetails(firstName, lastName) {
-        await this.page.getByRole('button', { name: 'Edit' }).first().click();
+        // await this.page.getByRole('button', { name: 'Edit' }).first().click();
         await this.page.getByPlaceholder('Enter your first name').fill(firstName);
         await this.page.getByRole('button', { name: 'Edit' }).first().click();
         await this.page.getByPlaceholder('Enter your last name').fill(lastName);

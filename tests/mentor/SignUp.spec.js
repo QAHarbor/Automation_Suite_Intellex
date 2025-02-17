@@ -28,6 +28,8 @@ test('should sign up mentor successfully with valid credentials and handle dupli
     // Submit the sign-up form
     await mentorSignUpPage.submitSignUp();
 
+    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+
     // Check for success message or error message using if-else
     const successMessage = await page.locator('text=Account created, Wait for admin approval and check email');
     const errorMessage = await page.locator('text=Email is already registered. Please login or use another email.');

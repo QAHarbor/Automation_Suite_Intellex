@@ -1,3 +1,5 @@
+import { test, expect } from '@playwright/test';
+
 test.use({ headless: false });
 
 test.describe('Mentor Profile Test Cases', () => {

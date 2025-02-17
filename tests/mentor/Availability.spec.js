@@ -8,46 +8,15 @@ const { validMentorLogin, urls } = require('@fixtures/test-data-mentor');
 
 
 
-test.use({headless : false})
+test.use({ headless: false })
 
 test.describe('Mentor Availability Tests', () => {
-  
- // Test Case: Mentor login successfully and pick an extra date
- test('Pick an extra date and override the updated test case by QA.', async ({ page }) => {
-  const mentorloginpage = new AuthPage(page);
-
-  const availablepage = new MentorAvailabilityModify(page);
-
-  await mentorloginpage.navigateToLogin(urls.baseUrl);
-  await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
-  await page.waitForTimeout(5000);
-
-  // Wait for success message
-  const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
-  await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
- 
-  
-  
-   // Navigate to the next month and click any Monday
-   await availablepage.navigateToNextMonth();
-   const clickedDate = await availablepage.clickAnyMonday();
-   
-   // If a Monday was clicked, proceed to add the override
-   if (clickedDate) {
-     await availablepage.addOverride();
-   }
-
-  // Pause to allow manual inspection (can be removed later)
-  console.log('Successfully picked an extra date');
-});
-
- 
-
- 
 
   // Test Case: Mentor login successfully and pick an extra date
-  test('Should pick extra date and override', async ({ page }) => {
+  test('Pick an extra date and override the updated test case by QA.', async ({ page }) => {
     const mentorloginpage = new AuthPage(page);
+
+    const availablepage = new MentorAvailabilityModify(page);
 
     await mentorloginpage.navigateToLogin(urls.baseUrl);
     await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
@@ -57,17 +26,44 @@ test.describe('Mentor Availability Tests', () => {
     const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
     await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
 
-    // Wait for navigation to portal
-    //await page.waitForURL(`${process.env.PORTAL_URL}`);
 
-    const availablepage = new Availability(page);
-    await availablepage.NavigatetoAvailability();
-    await availablepage.AddAvailableDate();
+
+    // Navigate to the next month and click any Monday
+    await availablepage.navigateToNextMonth();
+    const clickedDate = await availablepage.clickAnyMonday();
+
+    // If a Monday was clicked, proceed to add the override
+    if (clickedDate) {
+      await availablepage.addOverride();
+    }
 
     // Pause to allow manual inspection (can be removed later)
     console.log('Successfully picked an extra date');
   });
 
+  // // Test Case: Mentor login successfully and pick an extra date
+  // test('Should pick extra date and override', async ({ page }) => {
+  //   const mentorloginpage = new AuthPage(page);
+
+  //   await mentorloginpage.navigateToLogin(urls.baseUrl);
+  //   await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
+  //   await page.waitForTimeout(5000);
+
+  //   // Wait for success message
+  //   const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
+  //   await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
+
+  //   // Wait for navigation to portal
+  //   await page.waitForTimeout(5000);
+  //   // await page.waitForURL(`${process.env.PORTAL_URL}`);
+
+  //   const availablepage = new Availability(page);
+  //   await availablepage.NavigatetoAvailability();
+  //   await availablepage.AddAvailableDate();
+
+  //   // Pause to allow manual inspection (can be removed later)
+  //   console.log('Successfully picked an extra date');
+  // });
 
   // Test Case: Mentor can view availability
   test('User can view availability', async ({ page }) => {
@@ -89,12 +85,13 @@ test.describe('Mentor Availability Tests', () => {
     await availablePage.NavigatetoAvailability();
 
     // Verify availability section is visible
+    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
     const availabilitySection = page.getByText('Monday'); // Ensure correct selector
     await expect(availabilitySection).toBeVisible({ timeout: 5000 });
 
     console.info('✅ Availability page is successfully loaded and visible.');
   });
 
-  
+
 
 });
