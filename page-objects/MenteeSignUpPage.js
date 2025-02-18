@@ -17,7 +17,8 @@ class SignUp_Mentee {
         this.InteviewOption = page.getByRole('option', { name: 'Interview Preparation' });
         this.finish = page.locator('button', { hasText: 'Finish' });
         this.TermsBtn = page.locator('a[href="/terms-conditions/"]');
-        this.PrivacyBtn = page.locator('a[href="/privacy-policy/"]');
+
+        this.PrivacyBtn = page.locator('a.footer-links[href="/privacy-policy/"]');
         this.timezoneOptions = page.locator("//li[contains(text(), 'Australia/')]");
     }
 
@@ -106,8 +107,8 @@ class SignUp_Mentee {
     async navigateToPrivacyPage() {
         await this.page.goto(process.env.BASE_URL);
         await this.page.setViewportSize({ width: 1200, height: 800 });
-        await this.JoinUs.click();
-        await this.JoinAsMentee.click();
+        // await this.JoinUs.click();
+        // await this.JoinAsMentee.click();
         await this.PrivacyBtn.scrollIntoViewIfNeeded();
         await this.PrivacyBtn.click();
     }

@@ -37,6 +37,7 @@ test.describe('Mentee Profile Tests', () => {
         const updatedDetails = await profilePage.getPersonalDetails();
         expect(updatedDetails.firstName).toBe(personalDetails.valid.firstName);
         expect(updatedDetails.lastName).toBe(personalDetails.valid.lastName);
+  
     });
 
 

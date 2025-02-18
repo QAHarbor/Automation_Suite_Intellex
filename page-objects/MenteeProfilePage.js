@@ -22,32 +22,36 @@ class MenteeProfilePage {
         await this.page.locator('input[placeholder="Enter your current password"]').fill(currentPass);
         await this.page.locator('input[placeholder="Enter your new password"]').click();
         await this.page.locator('input[placeholder="Enter your new password"]').fill(newPass);
-        await this.page.locator('(//button[@type="button"])[4]').click();
-        await this.page.locator('.MuiButton-containedPrimary').click();
-        
+        await this.page.click("(//button[normalize-space()='Confirm'])[1]");
+
     }
 
 
 
-    async updatePersonalDetails(firstName, lastName) {
-        // await this.page.getByRole('button', { name: 'Edit' }).first().click();
+    async updatePersonalDetails(firstName, lastName,) {
         await this.page.getByPlaceholder('Enter your first name').fill(firstName);
-        await this.page.getByRole('button', { name: 'Edit' }).first().click();
         await this.page.getByPlaceholder('Enter your last name').fill(lastName);
-        
+        await this.page.getByPlaceholder('DD-MM-YYYY').fill('02-04-2006');
+        await this.page.click('(//input[@id=":r5:"])[1]');
+        await this.page.click('//li[@id=":r9:-option-1"]');
+        await this.page.click("(//button[normalize-space()='Save'])[1]");
+        await this.page.waitForTimeout(6000);
+
     }
 
     async getPersonalDetails() {
         const firstName = await this.page.getByPlaceholder('Enter your first name').inputValue();
         const lastName = await this.page.getByPlaceholder('Enter your last name').inputValue();
-        return { firstName, lastName };
+        return { firstName, lastName};
     }
 
     async updateBio(bio, goal) {
         await this.page.getByRole('tab', { name: 'Bio' }).click();
-        await this.page.getByPlaceholder('Write a few sentence about').fill(bio);
-        await this.page.getByPlaceholder('What\'s your goal?').fill(goal);
+        await this.page.fill('//textarea[@id="intro"]', bio);  
+        await this.page.fill('//textarea[@id="goal"]', goal);
+
         await this.page.getByRole('button', { name: 'Save' }).click();
+        await this.page.waitForTimeout(6000);
     }
 
     async getBio() {
@@ -59,10 +63,14 @@ class MenteeProfilePage {
 
     async updateInterests() {
         await this.page.getByRole('tab', { name: 'My interests/preferences' }).click();
-        await this.page.getByRole('button', { name: 'Edit' }).first().click();
-        await this.page.getByRole('button', { name: 'Accounting' }).click();
-        await this.page.getByLabel('controlled').check();
+        await this.page.click("(//div[@class='MuiStack-root mui-6fx5r7'])[1]");
+        await this.page.click('(//input[@type="checkbox"])[5]');
+        await this.page.click('body');
+        await this.page.click("(//div[@class='MuiStack-root mui-6fx5r7'])[2]");
+        await this.page.click("(//input[@type='checkbox'])[2]");
+        await this.page.click('body');
         await this.page.getByRole('button', { name: 'Save' }).click();
+        await this.page.waitForTimeout(6000);
     }
     
 

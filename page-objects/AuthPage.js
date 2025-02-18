@@ -16,6 +16,7 @@ class AuthPage {
         await this.emailInput.fill(email);
         await this.passwordInput.fill(password);
         await this.loginButton.click();
+        await this.page.waitForTimeout(6000);
     }
 
     async isLoginSuccessful() {

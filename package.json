@@ -15,7 +15,7 @@
     "@playwright/test": "^1.50.1",
     "@types/node": "^22.13.2",
     "allure-commandline": "^2.32.0",
-    "allure-playwright": "^3.1.0",
+    "allure-playwright": "^3.2.0",
     "babel-plugin-module-resolver": "^5.0.2",
     "module-alias": "^2.2.2"
   },

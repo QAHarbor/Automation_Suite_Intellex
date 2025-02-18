@@ -33,6 +33,7 @@ module.exports = {
         valid: {
             firstName: 'Tasniva',
             lastName: 'Sumi',
+            dob: '01-01-1993',
         },
         invalid: {
             firstName: 'A'.repeat(300),  // Excessively long input

@@ -1,4 +1,5 @@
 require('dotenv').config();  // Load environment variables
+const { faker } = require('@faker-js/faker');
 
 module.exports = {
     validMentorDetails: {

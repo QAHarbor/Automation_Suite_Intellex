@@ -69,14 +69,14 @@ test.describe('Mentor Filters and Tab Navigation Tests', () => {
     // await mentorFiltersPage.isTabSelected('Technology');
   });
 
-  test('Mentee Successfully See Courses after selecting timezone', async ({ page }) => {
+  test('Mentee Successfully See Mentors after selecting timezone', async ({ page }) => {
     await page.getByRole('link', { name: 'Browse Mentor' }).click();
     // Update interests and select timezone
     await mentorFiltersPage.SelectTimeZone();
   
   });
 
-  test('Mentee Successfully See Courses based on Price Ranges', async ({ page }) => {
+  test('Mentee Successfully See Mentors based on Price Ranges', async ({ page }) => {
     await page.getByRole('link', { name: 'Browse Mentor' }).click();
     // Update interests and select timezone
     await mentorFiltersPage.SelectPriceRange();

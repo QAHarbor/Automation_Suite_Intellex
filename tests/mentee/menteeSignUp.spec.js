@@ -30,17 +30,8 @@ test.describe('Mentee SignUp Tests', () => {
     // Open the Sign-Up page and perform actions
     await SignUp.navigateToPrivacyPage();
   
-    // Listen for a new tab being opened
-    const [newTab] = await Promise.all([
-      page.waitForEvent('popup'), // This will wait for the new tab
-    ]);
-  
-    // Wait for the header element to be visible in the new tab
-    await newTab.waitForSelector('p.header-text', { state: 'visible' });
-  
-    // Retrieve the header text from the new tab
-    const headerText = await newTab.textContent('p.header-text');
-  
+    const headerText = await page.textContent('p.header-text');
+
     // Assert that the header text matches the expected value
     if (headerText.trim() === 'Privacy Policy') {
       console.log('Assertion Passed: Header text matches "Privacy Policy"');
@@ -48,6 +39,7 @@ test.describe('Mentee SignUp Tests', () => {
       console.error(`Assertion Failed: Expected "Privacy Policy", but got "${headerText.trim()}"`);
     }
   });
+  
   
   test('Navigate to SignUp page and then Terms and Condition Page', async ({ page }) => {
     const SignUp = new SignUp_Mentee(page);
