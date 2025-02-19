@@ -55,6 +55,7 @@ class MentorSignUpPage {
 
     async submitSignUp() {
         await this.finishButton.click();
+        await this.page.waitForTimeout(6000);
     }
 }
 

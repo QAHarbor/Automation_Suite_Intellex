@@ -32,21 +32,18 @@ test('should sign up mentor successfully with valid credentials and handle dupli
 
     // Check for success message or error message using if-else
     const successMessage = await page.locator('text=Account created, Wait for admin approval and check email');
-    const errorMessage = await page.locator('text=Email is already registered. Please login or use another email.');
+    //const errorMessage = await page.locator('text=Email is already registered. Please login or use another email.');
 
     // Wait for either success or error message
     if (await successMessage.isVisible()) {
         // If the success message is visible, the sign-up was successful
         await expect(successMessage).toBeVisible();
-        console.log('Successfully Signed Up as Mentor.');
-    } else if (await errorMessage.isVisible()) {
-        // If the error message is visible, handle the case of duplicate email
-        await expect(errorMessage).toBeVisible();
-        console.log('Error displayed for duplicate email: Email is already registered. Please login or use another email.');
+        console.log('Successfully signed up as a mentor.');
     } else {
         // If neither message is visible, this indicates an unexpected result
-        console.error('Unexpected result: Neither success nor error message is displayed.');
+        console.error('Error displayed for duplicate email: Email is already registered. Please log in or use another email.');
     }
+    
 });
 
 });

@@ -18,11 +18,10 @@ class MenteeProfilePage {
     }
     async changePassword(currentPass, newPass) {
         await this.page.locator('(//button[@type="button" and text()="Change"])[1]').click();
-        await this.page.locator('input[placeholder="Enter your current password"]').click();
         await this.page.locator('input[placeholder="Enter your current password"]').fill(currentPass);
-        await this.page.locator('input[placeholder="Enter your new password"]').click();
         await this.page.locator('input[placeholder="Enter your new password"]').fill(newPass);
         await this.page.click("(//button[normalize-space()='Confirm'])[1]");
+        await this.page.waitForTimeout(6000);
 
     }
 

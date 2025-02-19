@@ -56,27 +56,27 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.50.1",
     "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "mentee\\MenteeProfile.spec.js",
-      "file": "mentee/MenteeProfile.spec.js",
+      "title": "mentee\\MentorFilters.spec.js",
+      "file": "mentee/MentorFilters.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Mentee Profile Tests",
-          "file": "mentee/MenteeProfile.spec.js",
+          "title": "Mentor Filters and Tab Navigation Tests",
+          "file": "mentee/MentorFilters.spec.js",
           "line": 9,
           "column": 6,
           "specs": [
             {
-              "title": "Mentee Successfully Updates Personal Details",
+              "title": "Successfully applies checkbox filters and verifies selection",
               "ok": true,
               "tags": [],
               "tests": [
@@ -90,26 +90,146 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 30488,
+                      "duration": 27549,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "https://intellex-stagging.vercel.app/portal/profile/\n"
+                          "text": "ontikdev.2@gmail.com\n"
+                        },
+                        {
+                          "text": "Password#123\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-18T10:44:35.184Z",
+                      "startTime": "2025-02-19T05:56:22.183Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "35f8c0f6264f11ab6e1f-ffee600c9d9205863052",
-              "file": "mentee/MenteeProfile.spec.js",
-              "line": 30,
-              "column": 9
+              "id": "416c9248b5bc99153eaf-877d9dc6f6bec5b05b66",
+              "file": "mentee/MentorFilters.spec.js",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "Switches tabs and verifies the active tab",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 2000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 27614,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "ontikdev.2@gmail.com\n"
+                        },
+                        {
+                          "text": "Password#123\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-19T05:56:50.038Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "416c9248b5bc99153eaf-161ea06b5e43bfcf2baa",
+              "file": "mentee/MentorFilters.spec.js",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "Mentee Successfully See Mentors after selecting timezone",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 2000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 37489,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "ontikdev.2@gmail.com\n"
+                        },
+                        {
+                          "text": "Password#123\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-19T05:57:17.673Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "416c9248b5bc99153eaf-5273c9a5b3e140afd2e0",
+              "file": "mentee/MentorFilters.spec.js",
+              "line": 72,
+              "column": 7
+            },
+            {
+              "title": "Mentee Successfully See Mentors based on Price Ranges",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 2000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 25151,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "ontikdev.2@gmail.com\n"
+                        },
+                        {
+                          "text": "Password#123\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-19T05:57:55.167Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "416c9248b5bc99153eaf-f9b0cb4076c52cedbe1e",
+              "file": "mentee/MentorFilters.spec.js",
+              "line": 79,
+              "column": 7
             }
           ]
         }
@@ -118,9 +238,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-18T10:44:32.861Z",
-    "duration": 33048.82,
-    "expected": 1,
+    "startTime": "2025-02-19T05:56:21.035Z",
+    "duration": 119565.59999999999,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

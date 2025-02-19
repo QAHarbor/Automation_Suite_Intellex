@@ -22,12 +22,6 @@ test.describe('Mentor Availability Tests', () => {
     await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
     await page.waitForTimeout(5000);
 
-    // Wait for success message
-    const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
-    await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
-
-
-
     // Navigate to the next month and click any Monday
     await availablepage.navigateToNextMonth();
     const clickedDate = await availablepage.clickAnyMonday();

@@ -66,8 +66,13 @@ class MentorAvailabilityModify {
   }
 
   async addOverride() {
-    await this.page.getByRole('button', { name: 'Add override' }).click();
+
+   // await this.page.getByRole('button', { name: 'Add override' }).click();
+    await this.page.locator("(//button[normalize-space()='Add override'])[1]").click();
+
     await this.page.getByRole('button', { name: 'Save changes' }).click();
+    await this.page.waitForTimeout(5000);
+
   }
 }
 

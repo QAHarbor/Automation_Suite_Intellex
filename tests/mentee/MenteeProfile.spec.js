@@ -44,10 +44,8 @@ test.describe('Mentee Profile Tests', () => {
     
 
     test('Mentee Successfully changed password', async ({ page }) => {
-
-        await profilePage.changePassword('Test@12345678', 'Test@12345678');
-        console.log('Changed password sucessfully');
-
+        await profilePage.changePassword(process.env.CURRENT_PASSWORD, process.env.NEW_PASSWORD);
+        console.log('Changed password successfully');
     });
 
     

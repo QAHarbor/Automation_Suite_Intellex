@@ -4,6 +4,9 @@ class MentorFiltersPage {
   constructor(page) {
     this.page = page;
 
+
+    this.baseUrl = process.env.BASE_URL || 'https://intellex-stagging.vercel.app';
+    this.FindMentorBtn = page.getByRole('link', { name: 'Find a Mentor' });
     // Checkbox filters
     this.interviewPreparationCheckbox = page.locator('label:has-text("Interview Preparation")');
     this.networkingCheckbox = page.locator('label:has-text("Networking")');
@@ -24,6 +27,10 @@ class MentorFiltersPage {
 
   }
 
+   async navigateToHome() {
+    await this.page.goto(this.baseUrl);
+    await this.FindMentorBtn.first().click();
+}
   // Select 'Interview Preparation' checkbox
   async checkInterviewPreparation() {
     await this.interviewPreparationCheckbox.check();
