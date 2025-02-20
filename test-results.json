@@ -63,186 +63,77 @@
   },
   "suites": [
     {
-      "title": "mentee\\MentorFilters.spec.js",
-      "file": "mentee/MentorFilters.spec.js",
+      "title": "mentee\\MentorBooking.spec.js",
+      "file": "mentee/MentorBooking.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Mentor Filters and Tab Navigation Tests",
-          "file": "mentee/MentorFilters.spec.js",
-          "line": 9,
-          "column": 6,
-          "specs": [
+          "title": "Successfully Booking a Mentor",
+          "ok": false,
+          "tags": [],
+          "tests": [
             {
-              "title": "Successfully applies checkbox filters and verifies selection",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
                 {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 48290,
+                  "error": {
+                    "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div').filter({ hasText: /^11:00 AM$/ })\u001b[22m\n",
+                    "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div').filter({ hasText: /^11:00 AM$/ })\u001b[22m\n\n    at BookMentor.bookSession (C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js:62:29)\n    at C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\tests\\mentee\\MentorBooking.spec.js:98:5",
+                    "location": {
+                      "file": "C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js",
+                      "column": 29,
+                      "line": 62
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\BookMentor.js:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m\n \u001b[90m 61 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'gridcell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m futureDate\u001b[33m.\u001b[39mgetDate()\u001b[33m.\u001b[39mtoString() })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtimeSlot\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mbookNowButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m     }\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 27549,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "ontikdev.2@gmail.com\n"
-                        },
-                        {
-                          "text": "Password#123\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-19T05:56:22.183Z",
-                      "attachments": []
+                      "location": {
+                        "file": "C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js",
+                        "column": 29,
+                        "line": 62
+                      },
+                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div').filter({ hasText: /^11:00 AM$/ })\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\BookMentor.js:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m\n \u001b[90m 61 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'gridcell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m futureDate\u001b[33m.\u001b[39mgetDate()\u001b[33m.\u001b[39mtoString() })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtimeSlot\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mbookNowButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m     }\u001b[0m\n\u001b[2m    at BookMentor.bookSession (C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js:62:29)\u001b[22m\n\u001b[2m    at C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\tests\\mentee\\MentorBooking.spec.js:98:5\u001b[22m"
                     }
                   ],
-                  "status": "expected"
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-20T07:14:24.878Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js",
+                    "column": 29,
+                    "line": 62
+                  }
                 }
               ],
-              "id": "416c9248b5bc99153eaf-877d9dc6f6bec5b05b66",
-              "file": "mentee/MentorFilters.spec.js",
-              "line": 29,
-              "column": 7
-            },
-            {
-              "title": "Switches tabs and verifies the active tab",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 27614,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "ontikdev.2@gmail.com\n"
-                        },
-                        {
-                          "text": "Password#123\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-19T05:56:50.038Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "416c9248b5bc99153eaf-161ea06b5e43bfcf2baa",
-              "file": "mentee/MentorFilters.spec.js",
-              "line": 50,
-              "column": 7
-            },
-            {
-              "title": "Mentee Successfully See Mentors after selecting timezone",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 37489,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "ontikdev.2@gmail.com\n"
-                        },
-                        {
-                          "text": "Password#123\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-19T05:57:17.673Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "416c9248b5bc99153eaf-5273c9a5b3e140afd2e0",
-              "file": "mentee/MentorFilters.spec.js",
-              "line": 72,
-              "column": 7
-            },
-            {
-              "title": "Mentee Successfully See Mentors based on Price Ranges",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 2000000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 25151,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "ontikdev.2@gmail.com\n"
-                        },
-                        {
-                          "text": "Password#123\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-19T05:57:55.167Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "416c9248b5bc99153eaf-f9b0cb4076c52cedbe1e",
-              "file": "mentee/MentorFilters.spec.js",
-              "line": 79,
-              "column": 7
+              "status": "unexpected"
             }
-          ]
+          ],
+          "id": "2e75e56f8d83745ed48b-02d4c45ad30deeb8827c",
+          "file": "mentee/MentorBooking.spec.js",
+          "line": 84,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-19T05:56:21.035Z",
-    "duration": 119565.59999999999,
-    "expected": 4,
+    "startTime": "2025-02-20T07:14:24.080Z",
+    "duration": 49858.031,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

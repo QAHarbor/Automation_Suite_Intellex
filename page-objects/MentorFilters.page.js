@@ -12,11 +12,13 @@ class MentorFiltersPage {
     this.networkingCheckbox = page.locator('label:has-text("Networking")');
     this.clearFiltersButton = page.locator('button:has-text("Clear all")');
 
-    // Tab navigation
-    this.accountingTab = page.locator('button[role="tab"]:has-text("Accounting")');
-    this.educationTab = page.locator('button[role="tab"]:has-text("Education")');
-    this.engineeringTab = page.locator('button[role="tab"]:has-text("Engineering")');
-    this.technologyTab = page.locator('button[role="tab"]:has-text("Technology")');
+//Active tab
+    this.tabs = {
+      accounting: page.locator('button[role="tab"]:has-text("Accounting")'),
+      education: page.locator('button[role="tab"]:has-text("Education")'),
+      engineering: page.locator('button[role="tab"]:has-text("Engineering")'),
+      technology: page.locator('button[role="tab"]:has-text("Technology")'),
+    };
 
     //Timezone selection
     this.TimeZoneBtn = page.locator("(//input[@id=':r1:'])[1]");
@@ -30,6 +32,8 @@ class MentorFiltersPage {
    async navigateToHome() {
     await this.page.goto(this.baseUrl);
     await this.FindMentorBtn.first().click();
+    await this.page.waitForTimeout(4000);
+
 }
   // Select 'Interview Preparation' checkbox
   async checkInterviewPreparation() {
@@ -61,37 +65,43 @@ class MentorFiltersPage {
     return !(await this.isInterviewPreparationChecked()) && !(await this.isNetworkingChecked());
   }
 
-  // Switch to 'Accounting' tab
-  async selectAccountingTab() {
-    await this.accountingTab.click();
-  }
+ 
+  async switchAndVerifyTabs() {
 
-  // Switch to 'Education' tab
-  async selectEducationTab() {
-    await this.educationTab.click();
-  }
-
-  // Switch to 'Engineering' tab
-  async selectEngineeringTab() {
-    await this.engineeringTab.click();
-  }
-
-  // Switch to 'Technology' tab
-  async selectTechnologyTab() {
-    await this.technologyTab.click();
+    for (const [tabName, tabLocator] of Object.entries(this.tabs)) {
+      await tabLocator.click();
+      await this.page.waitForTimeout(1000); // Ensure the content loads
+  
+      const mentorsContainer = this.page.locator('div.mentors-container-wrapper.MuiBox-root.mui-0').locator('p').nth(0);
+      const textContent = await mentorsContainer.textContent();
+  
+      console.log(`Clicked on ${tabName} tab`);
+      console.log(`Number of mentors available in ${tabName}:`, textContent);
+  
+      if (tabName === 'education' || tabName === 'technology') {
+        await this.page.getByTestId('KeyboardArrowRightIcon').click();
+      }
+    }
   }
 
   async SelectTimeZone(){
+  
+    
     await this.TimeZoneBtn.click();
     await this.TimeZoneBtn.waitFor({ state: 'visible' });
     await this.TimeZoneBtn.fill("Australia/Broken Hill (ACDT)");
+    await this.page.waitForTimeout(6000);
+
   }
 
   async SelectPriceRange(){
     await this.minField.click();
-    await this.minField.fill('10');
+    await this.minField.fill('500');
+    await this.page.waitForTimeout(6000);
     await this.maxField.click();
-    await this.maxField.fill('30');
+    await this.maxField.fill('800');
+    await this.page.waitForTimeout(6000);
+
   }
 
 }

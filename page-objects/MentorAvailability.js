@@ -2,7 +2,6 @@ class Availability {
     constructor(page) {
         this.page = page;
     
-       
         this.AvailabilityBtn = page.locator("(//p[normalize-space()='Availability'])[1]");
         this.AddOverrideBtn = page.locator("(//button[normalize-space()='Add an override'])[1]");
         this.NextMonthBtn = page.locator("//button[@title='Next month']//*[name()='svg']");
@@ -10,11 +9,6 @@ class Availability {
         
         this.AddSaveBtn = page.locator("(//button[normalize-space()='Add override'])[1]");
         this.FinalSaveBtn = page.locator("(//button[normalize-space()='Save changes'])[1]");
-
-
-
-
-      
 
     }
 
@@ -35,14 +29,7 @@ class Availability {
         await this.AddSaveBtn.click();
         await this.FinalSaveBtn.click();
     }
-
-
-
-   
-
    
     }
-    
-
 
 module.exports = Availability;

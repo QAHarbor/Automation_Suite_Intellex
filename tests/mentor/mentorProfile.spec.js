@@ -1,4 +1,8 @@
 import { test, expect } from '@playwright/test';
+import AuthPage from '@page-objects/AuthPage';
+const { validCredentials, urls } = require('@fixtures/test-data');
+import { validVolunteer,validMentorLogin } from '@fixtures/test-data-mentor';
+
 
 test.use({ headless: false });
 

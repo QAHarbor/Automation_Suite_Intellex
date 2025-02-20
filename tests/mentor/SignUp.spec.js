@@ -1,7 +1,9 @@
 import { test, expect } from '@playwright/test';
 import MentorSignUpPage from '@page-objects/MentorSignUpPage';
 
-const { validMentorDetails, invalidMentorDetails, urls } = require('@fixtures/test-data-mentor')
+
+
+const { validMentorDetails, invalidMentorDetails} = require('@fixtures/test-data-mentor')
 
 test.use({ headless: false });
 

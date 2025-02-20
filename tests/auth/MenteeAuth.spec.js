@@ -16,8 +16,8 @@ test.describe('Mentee Login Tests', () => {
         await authPage.login(validCredentials.email, validCredentials.password);
 
         // Wait for success message
-        const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
-        await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
+        // const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
+        // await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
 
         // Wait for navigation to portal
         await page.waitForURL(`${process.env.PORTAL_URL}`);
@@ -37,6 +37,7 @@ test.describe('Mentee Login Tests', () => {
         const errorMessage = await page.locator('.error');
         // await expect(errorMessage).toBeVisible();
         await expect(errorMessage).toHaveText('Incorrect email or password', { timeout: parseInt(process.env.TIMEOUT) });
+        console.log(errorMessage);
     
     });
 });

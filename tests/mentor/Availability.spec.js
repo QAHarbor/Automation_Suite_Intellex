@@ -35,31 +35,7 @@ test.describe('Mentor Availability Tests', () => {
     console.log('Successfully picked an extra date');
   });
 
-  // // Test Case: Mentor login successfully and pick an extra date
-  // test('Should pick extra date and override', async ({ page }) => {
-  //   const mentorloginpage = new AuthPage(page);
-
-  //   await mentorloginpage.navigateToLogin(urls.baseUrl);
-  //   await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
-  //   await page.waitForTimeout(5000);
-
-  //   // Wait for success message
-  //   const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
-  //   await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
-
-  //   // Wait for navigation to portal
-  //   await page.waitForTimeout(5000);
-  //   // await page.waitForURL(`${process.env.PORTAL_URL}`);
-
-  //   const availablepage = new Availability(page);
-  //   await availablepage.NavigatetoAvailability();
-  //   await availablepage.AddAvailableDate();
-
-  //   // Pause to allow manual inspection (can be removed later)
-  //   console.log('Successfully picked an extra date');
-  // });
-
-  // Test Case: Mentor can view availability
+ 
   test('User can view availability', async ({ page }) => {
     const mentorLoginPage = new AuthPage(page);
 

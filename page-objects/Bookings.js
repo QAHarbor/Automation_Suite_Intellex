@@ -9,14 +9,6 @@ class Bookings {
         this.HistoryBtn = page.locator("//button[normalize-space()='History']");
         this.CancelBtn = page.locator("//button[normalize-space()='Cancelled']");
 
-
-
-
- 
-  
-
-        
-
     }
 
     
@@ -41,12 +33,6 @@ class Bookings {
         await this.CancelBtn.click();
         await this.page.waitForTimeout(5000);
     }
-
-
-
-    
-
-
 
 
     }
