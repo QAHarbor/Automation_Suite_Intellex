@@ -4,11 +4,7 @@ class MentorProfile {
 
         //Profile Picture
         this.profilebtn = page.locator("//p[normalize-space()='Profile']");
-        this.UploadPicBtn = page.getByRole('button', { name: 'Upload' });
-        this.editBtn = page.locator('button.MuiButtonBase-root.mui-vlhhjv');
-        this.Selectfile = page.getByRole('button', { name: 'Choose a file' });
-        this.imageInput = page.locator('input[type="file"]');
-        this.SaveBtn1 = page.getByRole('button', { name: 'Save' });
+       
 
         //own profile
         this.VisitProfileBtn = page.locator("(//a[normalize-space()='View my profile'])[1]");
@@ -25,9 +21,7 @@ class MentorProfile {
         this.AccountBtn = page.locator("//button[normalize-space()='Account settings']");
         this.changeBtn = page.locator('(//button[@type="button" and text()="Change"])[1]');
         this.currentpassBtn = page.locator('input[placeholder="Enter your current password"]');
-        this.currEyebtn = page.locator('svg.iconify.iconify--akar-icons');
         this.newpassBtn = page.locator('input[placeholder="Enter your new password"]');
-        this.newEyebtn = page.locator('(//button[@type="button"])[4]');
         this.ConfirmBtn = page.locator('.MuiButton-containedPrimary');
         //Billing Info Tab
         this.BillingTab = page.locator("//button[normalize-space()='Billing information']");
@@ -40,15 +34,30 @@ class MentorProfile {
         await this.profilebtn.click();
         await this.page.waitForTimeout(3000);
     }
-    async UpdatePicture() {
-        await this.editBtn.click();
-        await this.Selectfile.click();
-        await this.imageInput.setInputFiles('C:/Users/Dell/Downloads/image (4).png');
-        await this.SaveBtn1.click();
-    }
+   
     async VisitOwnProfile() {
         await this.VisitProfileBtn.click()
         await this.page.waitForTimeout(3000);
+    }
+
+    async updateProfile(){
+
+await this.page.fill('#firstName', 'Hasnain');
+
+await this.page.fill('#lastName', 'vaia');
+
+await this.page.click('(//input[@id=":r4:"])[1]');
+await this.page.click('(//li[@id=":ri:-option-1"])[1]');
+
+await this.page.fill('#companyName', 'Ontik');
+
+await this.page.fill('#jobTitle', 'Software Engineer');
+
+await this.page.fill('#linkedInProfile', 'www.linkedin.com/in/xxx');
+
+await this.page.click("(//button[normalize-space()='Save'])[1]");
+await this.page.waitForTimeout(5000);
+
     }
 
 
@@ -65,6 +74,7 @@ class MentorProfile {
         await this.AdviceInput.click();
         await this.AdviceInput.fill(advice);
         await this.SaveBtn1.click();
+        await this.page.waitForTimeout(5000);
     }
     async PasswordChange(currentPass, newPass) {
         await this.AccountBtn.click();
@@ -73,8 +83,8 @@ class MentorProfile {
         await this.currentpassBtn.fill(currentPass);
         await this.newpassBtn.click();
         await this.newpassBtn.fill(newPass);
-        await this.newEyebtn.click();
         await this.ConfirmBtn.click();
+        await this.page.waitForTimeout(5000);
     }
     async MakeVolunteer() {
         await this.BillingTab.click();

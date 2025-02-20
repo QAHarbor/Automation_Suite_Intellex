@@ -33,6 +33,7 @@ class MenteeProfilePage {
         await this.page.getByPlaceholder('DD-MM-YYYY').fill('02-04-2006');
         await this.page.click('(//input[@id=":r5:"])[1]');
         await this.page.click('//li[@id=":r9:-option-1"]');
+        
         await this.page.click("(//button[normalize-space()='Save'])[1]");
         await this.page.waitForTimeout(6000);
 

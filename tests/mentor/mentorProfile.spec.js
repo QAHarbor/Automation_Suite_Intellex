@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AuthPage from '@page-objects/AuthPage';
+import MentorProfile from '@page-objects/MentorProfile';
 const { validCredentials, urls } = require('@fixtures/test-data');
 import { validVolunteer,validMentorLogin } from '@fixtures/test-data-mentor';
 
@@ -29,7 +30,7 @@ test.describe('Mentor Profile Test Cases', () => {
     const profilepage = new MentorProfile(page);
     await profilepage.NavigateToProfile();
     await profilepage.PasswordChange('Password#123', 'Password#123');
-    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+   // await page.waitForTimeout(parseInt(process.env.TIMEOUT));
   });
 
   test('Login successfully with valid credentials and see notifications', async ({ page }) => {
@@ -61,7 +62,7 @@ test.describe('Mentor Profile Test Cases', () => {
     await page.waitForTimeout(parseInt(process.env.TIMEOUT));
     const profilepage = new MentorProfile(page);
     await profilepage.NavigateToProfile();
-    await profilepage.updateProfile('John', 'Doe', 'google', 'Software Engineer L-1');
+    await profilepage.updateProfile();
     await page.waitForTimeout(parseInt(process.env.TIMEOUT));
     console.log('Successfully Updated Mentor Profile');
   });

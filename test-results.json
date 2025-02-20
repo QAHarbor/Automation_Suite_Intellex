@@ -56,84 +56,69 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "patch",
+    "updateSourceMethod": "3way",
     "version": "1.50.1",
     "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "mentee\\MentorBooking.spec.js",
-      "file": "mentee/MentorBooking.spec.js",
+      "title": "mentor\\MentorProfile.spec.js",
+      "file": "mentor/MentorProfile.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Successfully Booking a Mentor",
-          "ok": false,
-          "tags": [],
-          "tests": [
+          "title": "Mentor Profile Test Cases",
+          "file": "mentor/MentorProfile.spec.js",
+          "line": 10,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
+              "title": "Login successfully with valid credentials and change password",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 48290,
-                  "error": {
-                    "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div').filter({ hasText: /^11:00 AM$/ })\u001b[22m\n",
-                    "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div').filter({ hasText: /^11:00 AM$/ })\u001b[22m\n\n    at BookMentor.bookSession (C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js:62:29)\n    at C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\tests\\mentee\\MentorBooking.spec.js:98:5",
-                    "location": {
-                      "file": "C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js",
-                      "column": 29,
-                      "line": 62
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\page-objects\\BookMentor.js:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m\n \u001b[90m 61 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'gridcell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m futureDate\u001b[33m.\u001b[39mgetDate()\u001b[33m.\u001b[39mtoString() })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtimeSlot\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mbookNowButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m     }\u001b[0m"
-                  },
-                  "errors": [
+                  "timeout": 2000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
                     {
-                      "location": {
-                        "file": "C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js",
-                        "column": 29,
-                        "line": 62
-                      },
-                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div').filter({ hasText: /^11:00 AM$/ })\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\page-objects\\BookMentor.js:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m\n \u001b[90m 61 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'gridcell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m futureDate\u001b[33m.\u001b[39mgetDate()\u001b[33m.\u001b[39mtoString() })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtimeSlot\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mbookNowButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m     }\u001b[0m\n\u001b[2m    at BookMentor.bookSession (C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js:62:29)\u001b[22m\n\u001b[2m    at C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\tests\\mentee\\MentorBooking.spec.js:98:5\u001b[22m"
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 32139,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-20T09:10:49.643Z",
+                      "attachments": []
                     }
                   ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-02-20T07:14:24.878Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\page-objects\\BookMentor.js",
-                    "column": 29,
-                    "line": 62
-                  }
+                  "status": "expected"
                 }
               ],
-              "status": "unexpected"
+              "id": "906802ba1d7fabd28a29-7a7be8e7618c4496ea37",
+              "file": "mentor/MentorProfile.spec.js",
+              "line": 25,
+              "column": 7
             }
-          ],
-          "id": "2e75e56f8d83745ed48b-02d4c45ad30deeb8827c",
-          "file": "mentee/MentorBooking.spec.js",
-          "line": 84,
-          "column": 5
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-20T07:14:24.080Z",
-    "duration": 49858.031,
-    "expected": 0,
+    "startTime": "2025-02-20T09:10:47.298Z",
+    "duration": 35335.755000000005,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
