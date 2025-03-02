@@ -32,7 +32,7 @@ test.describe('Mentor Filters and Tab Navigation Tests', () => {
 
   
   test('Switches tabs and verifies the active tab', async ({ page }) => {
-    await mentorFiltersPage.navigateToHome();
+    // await mentorFiltersPage.navigateToHome();
     await mentorFiltersPage.switchAndVerifyTabs();
   });
 
@@ -41,6 +41,7 @@ test.describe('Mentor Filters and Tab Navigation Tests', () => {
     
     // Update interests and select timezone
     await mentorFiltersPage.SelectTimeZone();
+    await page.waitForTimeout(500);
    
   
   });

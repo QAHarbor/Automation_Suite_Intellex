@@ -17,6 +17,8 @@ class MentorProfile {
         this.EducationInput = page.locator('textarea#education');
         this.ReasonInput = page.locator('textarea#reasonForJob');
         this.AdviceInput = page.locator('textarea#bestAdvice');
+        this.SaveBtn1 = page.locator("(//button[normalize-space(.)='Save'])[1]")
+
         //change password
         this.AccountBtn = page.locator("//button[normalize-space()='Account settings']");
         this.changeBtn = page.locator('(//button[@type="button" and text()="Change"])[1]');
@@ -46,14 +48,14 @@ await this.page.fill('#firstName', 'Hasnain');
 
 await this.page.fill('#lastName', 'vaia');
 
-await this.page.click('(//input[@id=":r4:"])[1]');
-await this.page.click('(//li[@id=":ri:-option-1"])[1]');
+await this.page.click('(//input[@id=":r3:"])[1]');
+//await this.page.click('(//li[@id=":ri:-option-1"])[1]');
 
 await this.page.fill('#companyName', 'Ontik');
 
 await this.page.fill('#jobTitle', 'Software Engineer');
 
-await this.page.fill('#linkedInProfile', 'www.linkedin.com/in/xxx');
+await this.page.fill('#linkedInProfile', 'https://www.linkedin.com/in/suzana-ristic-48a636207/');
 
 await this.page.click("(//button[normalize-space()='Save'])[1]");
 await this.page.waitForTimeout(5000);

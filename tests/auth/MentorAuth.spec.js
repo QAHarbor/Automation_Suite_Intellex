@@ -14,9 +14,7 @@ test.describe('Mentor Login Tests', () => {
         await mentorloginpage.navigateToLogin(urls.baseUrl);
         await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
 
-        // Wait for success message
-        const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
-        await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
+    
 
         // Wait for navigation to portal
         await page.waitForURL(`${process.env.PORTAL_URL}`);

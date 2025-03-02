@@ -5,7 +5,7 @@ class MentorFiltersPage {
     this.page = page;
 
 
-    this.baseUrl = process.env.BASE_URL || 'https://intellex-stagging.vercel.app';
+    this.baseUrl = process.env.BASE_URL || 'https://staging.intellex.co';
     this.FindMentorBtn = page.getByRole('link', { name: 'Find a Mentor' });
     // Checkbox filters
     this.interviewPreparationCheckbox = page.locator('label:has-text("Interview Preparation")');
@@ -21,7 +21,7 @@ class MentorFiltersPage {
     };
 
     //Timezone selection
-    this.TimeZoneBtn = page.locator("(//input[@id=':r1:'])[1]");
+    this.TimeZoneBtn = page.locator("(//input[@id=':r2:'])[1]");
 
    //Select Price range
    this.minField = page.locator('#minPrice');
@@ -78,9 +78,7 @@ class MentorFiltersPage {
       console.log(`Clicked on ${tabName} tab`);
       console.log(`Number of mentors available in ${tabName}:`, textContent);
   
-      if (tabName === 'education' || tabName === 'technology') {
-        await this.page.getByTestId('KeyboardArrowRightIcon').click();
-      }
+      
     }
   }
 

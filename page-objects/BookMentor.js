@@ -4,8 +4,8 @@ class BookMentor {
         this.page = page;
        
         // Locators for calendar and booking details
-        this.selctCalender = page.getByRole('gridcell', { name: '28', exact: true });
-        this.timeselect = page.getByText('4:00 AM');
+        this.selctCalender = page.getByRole('gridcell', { name: '12', exact: true });
+        this.timeselect = page.locator("(//p[normalize-space()='10:00 AM'])[1]");
         this.BooknowBtn = page.getByRole('button', { name: 'Book now' });
        
         // Payment iframe locators
@@ -55,11 +55,18 @@ class BookMentor {
         const today = new Date();
         const futureDate = new Date(today);
        // futureDate.setDate(today.getDate() + 4);
-       futureDate.setDate(today.getDate()+3);
+       futureDate.setDate(today.getDate()+2);
 
 
-        await this.page.getByRole('gridcell', { name: futureDate.getDate().toString() }).click();
-        await this.timeSlot.click();
+        //await this.page.getByRole('gridcell', { name: futureDate.getDate().toString() }).click();
+        //await this.page.getByRole('gridcell', { name: futureDate.getDate().toString() }).first().click();  // Select the first matching element
+        await this.page.getByRole('gridcell', { name: futureDate.getDate().toString() }).first().dblclick();
+
+        await this.page.waitForTimeout(2000);
+
+       // await this.timeSlot.click();
+       await this.timeselect.click();
+
         await this.bookNowButton.click();
         await this.page.waitForTimeout(5000);
     }
@@ -74,7 +81,8 @@ class BookMentor {
         await stripeFrame.getByRole('textbox', { name: 'Expiration date MM / YY' }).fill(expiry);
         await stripeFrame.getByRole('textbox', { name: 'Security code' }).fill(securityCode);
        
-        await this.page.getByRole('button', { name: 'Confirm and Pay' }).click();
+        await this.page.locator("(//button[normalize-space()='Confirm and Pay'])[1]").click();
+
         await this.page.waitForTimeout(5000);
     }
 

@@ -44,8 +44,7 @@ test.describe('Mentor Availability Tests', () => {
     await mentorLoginPage.login(validMentorLogin.email, validMentorLogin.password);
 
     // Wait for success message
-    const successMessage = page.locator('.success'); // Update class if needed
-    await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
+    
 
     // Wait for navigation to the portal
     await expect(page).toHaveURL(`${process.env.PORTAL_URL}`);

@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\playwright.config.js",
-    "rootDir": "C:/Users/Dell/Desktop/Version3_Intellex/Automation_Suite_Intellex/tests",
+    "configFile": "C:\\Users\\ASUS\\Desktop\\NewDirectoryName\\playwright.config.js",
+    "rootDir": "C:/Users/ASUS/Desktop/NewDirectoryName/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -28,7 +28,7 @@
         }
       ],
       [
-        "C:\\Users\\Dell\\Desktop\\Version3_Intellex\\Automation_Suite_Intellex\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        "C:\\Users\\ASUS\\Desktop\\NewDirectoryName\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
         null
       ]
     ],
@@ -39,13 +39,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/Dell/Desktop/Version3_Intellex/Automation_Suite_Intellex/test-results",
+        "outputDir": "C:/Users/ASUS/Desktop/NewDirectoryName/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "",
         "name": "",
-        "testDir": "C:/Users/Dell/Desktop/Version3_Intellex/Automation_Suite_Intellex/tests",
+        "testDir": "C:/Users/ASUS/Desktop/NewDirectoryName/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.spec.js",
@@ -63,20 +63,20 @@
   },
   "suites": [
     {
-      "title": "mentor\\MentorProfile.spec.js",
-      "file": "mentor/MentorProfile.spec.js",
+      "title": "mentor\\Bookings.spec.js",
+      "file": "mentor/Bookings.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Mentor Profile Test Cases",
-          "file": "mentor/MentorProfile.spec.js",
+          "title": "Check Bookings Tests",
+          "file": "mentor/Bookings.spec.js",
           "line": 10,
           "column": 6,
           "specs": [
             {
-              "title": "Login successfully with valid credentials and change password",
+              "title": "Sucessfully see pending bookings",
               "ok": true,
               "tags": [],
               "tests": [
@@ -88,24 +88,28 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 15,
                       "status": "passed",
-                      "duration": 32139,
+                      "duration": 25303,
                       "errors": [],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "Sucessfully checked pending booking session\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-20T09:10:49.643Z",
+                      "startTime": "2025-03-02T08:14:09.499Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "906802ba1d7fabd28a29-7a7be8e7618c4496ea37",
-              "file": "mentor/MentorProfile.spec.js",
-              "line": 25,
-              "column": 7
+              "id": "27cfbe80da1e99601698-d85511d70c2fe88bf993",
+              "file": "mentor/Bookings.spec.js",
+              "line": 27,
+              "column": 9
             }
           ]
         }
@@ -114,8 +118,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-20T09:10:47.298Z",
-    "duration": 35335.755000000005,
+    "startTime": "2025-03-02T08:14:07.085Z",
+    "duration": 28290.34999999986,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

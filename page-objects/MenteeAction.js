@@ -35,13 +35,13 @@ class MenteeAction {
     async CheckingDetails() {
 
         await this.PendingBtn.click();
-        await this.page.waitForTimeout(7000);
+        await this.page.waitForTimeout(2000);
         await this.UpcomingBtn.click();
-        await this.page.waitForTimeout(7000);
+        await this.page.waitForTimeout(2000);
         await this.HistoryBtn.click();
-        await this.page.waitForTimeout(7000);
+        await this.page.waitForTimeout(2000);
         await this.CancelBtn.click();
-        await this.page.waitForTimeout(7000);
+        await this.page.waitForTimeout(2000);
 
     }
 

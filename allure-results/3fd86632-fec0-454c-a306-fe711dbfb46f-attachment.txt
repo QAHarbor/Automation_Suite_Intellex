@@ -1,0 +1,1 @@
+Assertion Passed: Successfully added mentor to the favorite list.

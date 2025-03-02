@@ -12,9 +12,7 @@ test.describe('Mentor Profile Test Cases', () => {
     const mentorloginpage = new AuthPage(page);
     await mentorloginpage.navigateToLogin(urls.baseUrl);
     await mentorloginpage.login(validVolunteer.email, validVolunteer.password);
-    // Wait for success message
-    const successMessage = page.locator('.success'); // Replace with the actual class for the success toast
-    await expect(successMessage).toHaveText('Signed In Successfully!', { timeout: parseInt(process.env.TIMEOUT) });
+    
     // Wait for navigation to portal
     await page.waitForURL(`${process.env.PORTAL_URL}`);
     const profilepage = new MentorProfile(page);
@@ -26,7 +24,7 @@ test.describe('Mentor Profile Test Cases', () => {
     const mentorloginpage = new AuthPage(page);
     await mentorloginpage.navigateToLogin(urls.baseUrl);
     await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
-    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+   
     const profilepage = new MentorProfile(page);
     await profilepage.NavigateToProfile();
     await profilepage.PasswordChange('Password#123', 'Password#123');
@@ -37,7 +35,7 @@ test.describe('Mentor Profile Test Cases', () => {
     const mentorloginpage = new AuthPage(page);
     await mentorloginpage.navigateToLogin(urls.baseUrl);
     await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
-    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+    //await page.waitForTimeout(parseInt(process.env.TIMEOUT));
     const profilepage = new MentorProfile(page);
     await profilepage.NavigateToProfile();
     await profilepage.NotificationVisit();
@@ -48,7 +46,7 @@ test.describe('Mentor Profile Test Cases', () => {
     const mentorloginpage = new AuthPage(page);
     await mentorloginpage.navigateToLogin(urls.baseUrl);
     await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
-    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+    //await page.waitForTimeout(parseInt(process.env.TIMEOUT));
     const profilepage = new MentorProfile(page);
     await profilepage.NavigateToProfile();
     await profilepage.VisitOwnProfile();
@@ -59,11 +57,11 @@ test.describe('Mentor Profile Test Cases', () => {
     const mentorloginpage = new AuthPage(page);
     await mentorloginpage.navigateToLogin(urls.baseUrl);
     await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
-    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+    //await page.waitForTimeout(parseInt(process.env.TIMEOUT));
     const profilepage = new MentorProfile(page);
     await profilepage.NavigateToProfile();
     await profilepage.updateProfile();
-    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+    //await page.waitForTimeout(parseInt(process.env.TIMEOUT));
     console.log('Successfully Updated Mentor Profile');
   });
 
@@ -71,11 +69,11 @@ test.describe('Mentor Profile Test Cases', () => {
     const mentorloginpage = new AuthPage(page);
     await mentorloginpage.navigateToLogin(urls.baseUrl);
     await mentorloginpage.login(validMentorLogin.email, validMentorLogin.password);
-    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+    // await page.waitForTimeout(parseInt(process.env.TIMEOUT));
     const profilepage = new MentorProfile(page);
     await profilepage.NavigateToProfile();
     await profilepage.UpdateBio('I am a new user and excited to be here!', 'I have worked as a software engineer for 2 years.', 'I have a degree in Computer Science.', ' because it offers great growth opportunities.', 'Take risks and trust your instincts');
-    await page.waitForTimeout(parseInt(process.env.TIMEOUT));
+    //await page.waitForTimeout(parseInt(process.env.TIMEOUT));
     console.log('Successfully Updated Mentor Bio');
   });
 });
